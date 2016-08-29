@@ -1,0 +1,7 @@
+.idea
+
+/npm-debug.log
+/node_modules/
+/dist/
+/typings/index.d.ts
+/typings/globals/

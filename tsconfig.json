@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6", // module handling is handled by WebPack
+    "jsx": "react", // could be handled by Babel, but preserve throws an error
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "preserveConstEnums": true
+  },
+  "files": [
+    "./typings/index.d.ts",
+    "./typings/CookBook.d.ts",
+
+    "./src/app.tsx",
+    "./src/components/Footer.tsx",
+    "./src/components/Header.tsx",
+    "./src/components/MainLayout.tsx",
+    "./src/components/instant-box/DisplayTable.tsx",
+    "./src/components/instant-box/InstantBox.tsx",
+    "./src/components/instant-box/SearchBox.tsx",
+    "./src/modules/Http.ts",
+    "./src/modules/Text.ts"
+  ]
+}

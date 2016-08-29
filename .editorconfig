@@ -1,0 +1,22 @@
+# top-most EditorConfig file
+root = true
+
+# Windows-style newlines, charset
+[*]
+end_of_line = crlf
+charset = utf-8
+
+# 2 space indentation for JSON
+[*.json]
+indent_style = space
+indent_size = 2
+
+# 4 space indentation for TS, JS
+[{**.ts,**.js}]
+indent_style = space
+indent_size = 4
+
+# whitespace for TS, JS
+[{**.ts,**.js}]
+insert_final_newline = false
+trim_trailing_whitespace = true
