@@ -1,0 +1,7 @@
+// categories
+export const GET_CATEGORIES_SUCCESS = 'GET_CATEGORIES_SUCCESS';
+
+// recipes
+export const GET_RECIPE_SUCCESS = 'GET_RECIPE_SUCCESS';
+export const GET_RECIPES_SUCCESS = 'GET_RECIPES_SUCCESS';
+export const SEARCH_RECIPES = 'SEARCH_RECIPES';

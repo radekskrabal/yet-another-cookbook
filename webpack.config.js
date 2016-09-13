@@ -30,7 +30,9 @@ const config = {
         "react": "React",
         "react-dom": "ReactDOM",
         "react-router": "ReactRouter",
-        "history": "History"
+        "history": "History",
+        "redux": "Redux",
+        "react-redux": "ReactRedux"
     }
 };
 

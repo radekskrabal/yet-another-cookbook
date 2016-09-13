@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Text from '../../modules/Text';
-import AppLink from '../AppLink';
+import AppLink from '../app-link';
 
 interface IDisplayTableProps {
     categories: ICategory[];

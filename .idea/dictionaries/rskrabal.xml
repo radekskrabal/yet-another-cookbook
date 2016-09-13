@@ -2,8 +2,11 @@
   <dictionary name="rskrabal">
     <words>
       <w>devtool</w>
+      <w>polyfill</w>
+      <w>redux</w>
       <w>tagname</w>
       <w>typings</w>
+      <w>whatwg</w>
     </words>
   </dictionary>
 </component>

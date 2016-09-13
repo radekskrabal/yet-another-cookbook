@@ -13,7 +13,7 @@ export default class SearchBox extends React.Component<ISearchBoxProps, {}> {
     }
 
     private onQueryChange(): void {
-        const query = this.searchInput.value;
+        let query = this.searchInput.value;
         this.props.setQuery(query);
     }
 }
