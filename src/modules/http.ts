@@ -1,4 +1,5 @@
-function isSuccess(status: number): boolean {
+// https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+export function isSuccess(status: number): boolean {
     return status >= 200 && status < 300;
 }
 

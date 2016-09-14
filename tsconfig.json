@@ -15,13 +15,30 @@
     "./typings/app.d.ts",
 
     "./src/app.tsx",
+    "./src/actions/action-types.ts",
+    "./src/actions/category-actions.ts",
+    "./src/actions/category-actions.test.ts",
+    "./src/actions/recipe-actions.ts",
+    "./src/actions/recipe-actions.test.ts",
+
     "./src/components/footer.tsx",
     "./src/components/header.tsx",
     "./src/components/main-layout.tsx",
     "./src/components/recipes/DisplayTable.tsx",
     "./src/components/recipes/SearchBox.tsx",
     "./src/components/recipes/RecipesContainer.tsx",
+
     "./src/modules/http.ts",
-    "./src/modules/text.ts"
+    "./src/modules/http.test.ts",
+    "./src/modules/text.ts",
+    "./src/modules/text.test.ts",
+
+    "./src/reducers/index.ts",
+    "./src/reducers/category-reducer.ts",
+    "./src/reducers/category-reducer.test.ts",
+    "./src/reducers/query-reducer.ts",
+    "./src/reducers/query-reducer.test.ts",
+    "./src/reducers/recipe-reducer.ts",
+    "./src/reducers/recipe-reducer.test.ts"
   ]
 }
