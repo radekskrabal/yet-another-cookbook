@@ -9,7 +9,6 @@ const config = {
         publicPath: './dist',
         path: path.resolve("dist")
     },
-    devtool: "inline-source-map",
     resolve: {
         extensions: ["", ".ts", ".tsx", ".js", '.jsx'],
         modulesDirectories: ['./src', './node_modules'],

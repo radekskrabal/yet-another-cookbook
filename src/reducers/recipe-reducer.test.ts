@@ -78,22 +78,22 @@ describe('recipe reducer', () => {
         expect(
             recipeReducer({
                 recipes: [
-                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara'}
+                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ '4 egg yolks' ], method: [ 'Start boiling the water.' ]}
                 ],
                 filter: { category_id: null, query: null, recipes: [] },
                 filterById: { recipe_id: null, recipe: null }
             }, {
                 type: actions.GET_RECIPES_SUCCESS,
                 recipes: [
-                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara'},
-                    {id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro'}
+                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ '4 egg yolks' ], method: [ 'Start boiling the water.' ]},
+                    {id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro', servings: 1, time: 15, ingredients: [ '4 tomatoes' ], method: [ 'Start boiling the water.' ]}
                 ]
             })
         ).toEqual(
             {
                 recipes: [
-                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara'},
-                    {id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro'}
+                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ '4 egg yolks' ], method: [ 'Start boiling the water.' ]},
+                    {id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro', servings: 1, time: 15, ingredients: [ '4 tomatoes' ], method: [ 'Start boiling the water.' ]}
                 ],
                 filter: { category_id: null, query: null, recipes: [] },
                 filterById: { recipe_id: null, recipe: null }

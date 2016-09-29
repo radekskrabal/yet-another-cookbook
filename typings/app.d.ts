@@ -37,5 +37,10 @@ interface IRecipe {
     category_id: number;
     category: string;
     name: string;
+    servings: number;
+    time: number;
+    ingredients: string[];
+    method: string[];
+    finish?: string[];
     url?: string;
 }

@@ -10,8 +10,8 @@ export default function(props: { categories: ICategory[] }): JSX.Element {
         );
     });
     return (
-        <aside>
-            <AppLink to="/">All Recipes</AppLink>
+        <aside className="text-center">
+            <AppLink to="/">Vše</AppLink>
             {links}
         </aside>
     );

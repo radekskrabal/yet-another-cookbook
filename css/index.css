@@ -1,15 +1,91 @@
-body {
-    padding: 10px 50px;
+div#react-app-container {
+    margin: 0 5%;
 }
 
 header img {
     float: left;
-    width: 32px;
-    height: 32px;
+    width: 4rem;
+    height: 4rem;
     margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+header p {
+    margin-left: 5rem;
+}
+
+aside a {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+aside a:first-child {
+    margin-left: 0;
+}
+
+.search-box {
+    margin: 1rem auto 0
+}
+
+article {
+    margin-top: 3rem;
+}
+
+article img {
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+
+article a {
+    display: block; /* under image */
+    font-size: 1.8rem;
+}
+
+.recipe em {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.recipe .time {
+    padding-left: 3rem;
+    font-size: 1.8rem;
+    background: url('../img/time.png') 0 -3px no-repeat /*http://www.iconarchive.com/show/origami-colored-pencil-icons-by-double-j-design/green-clock-icon.html*/
+}
+
+.recipe .servings {
+    padding-left: 3rem;
+    font-size: 1.8rem;
+    background: url('../img/servings.png') 0 -3px no-repeat /* http://www.iconarchive.com/show/outline-icons-by-iconsmind/Plate-icon.html */
+}
+
+ul,
+ol {
+    padding-left: 0px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ol li {
+    list-style-position: inside;
 }
 
 mark {
     padding: 0;
     background-color: #ffff75;
+}
+
+footer {
+    background-color: #de4040;
+    color: white;
+    margin-top: 3rem;
+    padding-top: 15px;
+}
+
+footer p {
+    margin-bottom: 0;
 }

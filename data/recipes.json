@@ -2,6 +2,7 @@
   {
     "id": 1,
     "category_id": 1,
+    "category": "Pasta",
     "name": "Spaghetti Carbonara",
     "time": 30,
     "servings": 2,
@@ -29,6 +30,7 @@
   {
     "id": 2,
     "category_id": 1,
+    "category": "Pasta",
     "name": "Spaghetti Pomodoro",
     "time": 45,
     "servings": 2,
@@ -63,17 +65,28 @@
   {
     "id": 3,
     "category_id": 1,
+    "category": "Pasta",
     "name": "Spaghetti Aglio Olio e Peperoncino e Pancetta",
+    "time": 45,
+    "servings": 2,
+    "ingredients": [],
+    "method": [],
     "url": "http://www.sitalemvkuchyni.cz/recept/Aglio-olio-e-peperoncino"
   },
   {
     "id": 4,
     "category_id": 2,
-    "name": "Crema Catalana"
+    "category": "Dezert",
+    "name": "Crema Catalana",
+    "time": 60,
+    "servings": 2,
+    "ingredients": [],
+    "method": []
   },
   {
     "id": 5,
     "category_id": 4,
+    "category": "Hlavní chod",
     "name": "Risotto",
     "time": 45,
     "servings": 2,

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as Text from '../../modules/Text';
+import * as Http from '../../modules/http';
+import * as Text from '../../modules/text';
 import AppLink from '../app-link';
 
 interface IDisplayTableProps {
@@ -8,28 +9,21 @@ interface IDisplayTableProps {
 }
 
 export default function (props: IDisplayTableProps): JSX.Element {
-    let rows = props.recipes.map(recipe => {
+    let recipes = props.recipes.map(recipe => {
         let { id, category, name } = recipe;
 
         // TODO: Refactor into row component
         return (
-            <tr key={id}>
-                <td>
-                    <AppLink dangerouslySetInnerHTML={{ __html: Text.decorate(name, props.query) }} to={'/recipes/' + id} />
-                </td>
-                <td dangerouslySetInnerHTML={{ __html: Text.decorate(category, props.query) }} />
-            </tr>
+            <article key={id}>
+                <img src={Http.buildUrl(`img/recipes/${id}.jpg`)} />
+                <AppLink dangerouslySetInnerHTML={{ __html: Text.decorate(name, props.query) }} to={'/recipes/' + id} />
+                <em className="text-muted" dangerouslySetInnerHTML={{ __html: Text.decorate(category, props.query) }} />
+            </article>
         );
     });
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>
+        <section>
+            {recipes}
+        </section>
     );
 }

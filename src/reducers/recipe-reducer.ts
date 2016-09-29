@@ -42,10 +42,6 @@ const filterRecipes = (recipes: IRecipe[], category_id: number, query: string): 
 };
 
 const matchRecipe = (recipe: IRecipe, category_id: number, query: string): boolean => {
-    if (query === '' || category_id === 0) { // TODO: Remove
-        debugger;
-    }
-
     if (category_id !== null && recipe.category_id !== category_id) {
         return false;
     }

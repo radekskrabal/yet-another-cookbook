@@ -20,7 +20,7 @@ class RecipesContainer extends React.Component<IRecipesContainerProps, {}> {
         if (this.props.recipes.length === 0) {
             if (this.canToggleAllRecipes(this.props.category_id, this.props.query)) {
                 return (
-                    <div>
+                    <div  className="text-center">
                         <SearchBox query={this.props.query} setQuery={this.setQuery.bind(this)} />
                         <div>No recipes found matching '{this.props.query}'. Try to search <AppLink to="/">All Recipes</AppLink>?</div>
                     </div>
@@ -28,14 +28,14 @@ class RecipesContainer extends React.Component<IRecipesContainerProps, {}> {
             }
 
             return (
-                <div>
+                <div className="text-center">
                     <SearchBox query={this.props.query} setQuery={this.setQuery.bind(this)} />
                 </div>
             );
         }
 
         return (
-            <div>
+            <div className="text-center">
                 <SearchBox query={this.props.query} setQuery={this.setQuery.bind(this)} />
                 <DisplayTable recipes={this.props.recipes} query={this.props.query} />
             </div>
@@ -76,17 +76,3 @@ const mapStateToProps = (store: IStoreState): IRecipesContainerProps => {
 };
 
 export default connect(mapStateToProps)(RecipesContainer);
-
-// TODO: Use nice Bootstrap search field
-/* return (
-    <div className="input-group col-md-4">
-        <form className="navbar-form" role="search">
-            <input type="text" className="form-control input-lg" placeholder="Search all recipes" />
-            <span className="input-group-btn">
-                        <button className="btn btn-info btn-lg" type="button">
-                            <i className="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
-        </form>
-    </div>
-); */
