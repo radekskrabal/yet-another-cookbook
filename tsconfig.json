@@ -24,6 +24,8 @@
     "./src/components/footer.tsx",
     "./src/components/header.tsx",
     "./src/components/main-layout.tsx",
+    "./src/components/recipe/RecipeContainer.tsx",
+    "./src/components/recipe/RecipeView.tsx",
     "./src/components/recipes/DisplayTable.tsx",
     "./src/components/recipes/SearchBox.tsx",
     "./src/components/recipes/RecipesContainer.tsx",
@@ -36,8 +38,6 @@
     "./src/reducers/index.ts",
     "./src/reducers/category-reducer.ts",
     "./src/reducers/category-reducer.test.ts",
-    "./src/reducers/query-reducer.ts",
-    "./src/reducers/query-reducer.test.ts",
     "./src/reducers/recipe-reducer.ts",
     "./src/reducers/recipe-reducer.test.ts"
   ]

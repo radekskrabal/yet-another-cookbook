@@ -4,16 +4,26 @@ interface ICategoryState {
 
 interface IRecipeState {
     recipes: IRecipe[];
+    filter: IRecipeFilterState;
+    filterById: IRecipeFilterById;
 }
 
-interface IQueryState {
+// global filter
+interface IRecipeFilterState {
+    category_id: number;
     query: string;
+    recipes: IRecipe[];
+}
+
+// recipe detail
+interface IRecipeFilterById {
+    recipe_id: number;
+    recipe: IRecipe;
 }
 
 interface IStoreState {
     categoryState: ICategoryState;
     recipeState: IRecipeState;
-    queryState: IQueryState;
 }
 
 /* JSON data */
@@ -27,5 +37,5 @@ interface IRecipe {
     category_id: number;
     category: string;
     name: string;
+    url?: string;
 }
-

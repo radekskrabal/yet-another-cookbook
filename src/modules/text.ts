@@ -1,7 +1,10 @@
 export function decorate(text: string, query: string, tagname = 'mark'): string {
-    let lcQuery = query.toLowerCase();
+    if (query === null) {
+        return text
+    }
 
-    if (query === '' || !text.toLowerCase().includes(lcQuery)) { // nothing to be decorated
+    let lcQuery = query.toLowerCase();
+    if (!text.toLowerCase().includes(lcQuery)) { // nothing to be decorated
         return text;
     }
 

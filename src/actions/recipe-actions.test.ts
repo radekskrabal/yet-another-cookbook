@@ -22,9 +22,11 @@ describe('recipe actions', () => {
 
     it('searchRecipes should create SEARCH_RECIPES action', () => {
         const query = '';
-        expect(searchRecipes(query)).toEqual({
+        const category_id = 0;
+        expect(searchRecipes(query, category_id)).toEqual({
             type: actions.SEARCH_RECIPES,
-            query
+            query,
+            category_id
         });
     });
 });

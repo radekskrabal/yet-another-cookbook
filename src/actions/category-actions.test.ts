@@ -10,5 +10,5 @@ describe('category actions', () => {
             type: actions.GET_CATEGORIES_SUCCESS,
             categories
         });
-    })
+    });
 });

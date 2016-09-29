@@ -2,22 +2,100 @@
   {
     "id": 1,
     "category_id": 1,
-    "category": "Pasta",
     "name": "Spaghetti Carbonara",
+    "time": 30,
+    "servings": 2,
+    "ingredients": [
+      "200g spaghetti",
+      "30g pancetty",
+      "4x vaječný žloužek",
+      "1 lžička černého pepře",
+      "1 lžíce parmigiano reggiano",
+      "špetka soli",
+      "1 lžíce vody se škrobem"
+    ],
+    "method": [
+      "Dáme vařit vodu (4l), osolíme až v bodě varu.",
+      "Nakrájíme a na olivovém oleji orestujeme pancettu.",
+      "Dáme vařit pastu.",
+      "Smícháme 4 vaječné žloutky, parmezán, pepř, sůl a vodu se škrobem",
+      "Pastu dáme na vychladlou pánev, zalijeme omáčkou."
+    ],
+    "finish": [
+      "Posypeme hoblinami parmezánu a opepříme."
+    ],
     "url": "http://www.sitalemvkuchyni.cz/recept/Carbonara"
   },
   {
     "id": 2,
     "category_id": 1,
-    "category": "Pasta",
     "name": "Spaghetti Pomodoro",
-    "url": "http://www.sitalemvkuchyni.cz/recept/Sugo-pomodoro"
+    "time": 45,
+    "servings": 2,
+    "ingredients": [
+      "200g spaghetti",
+      "400g loupaná rajčata San Marzano",
+      "5 listů čerstvé bazalky",
+      "špetka oregana",
+      "1/2 stroužku česneku",
+      "1/2 menší cibule",
+      "sůl",
+      "1 lžíce olivového oleje",
+      "1dl bílého vína",
+      "1 lžička třtinového cukru",
+      "1-2 lžíce vody se škrobem"
+    ],
+    "method": [
+      "Na slabém plameni necháme na oleji se špetkou soli zesklovatět cibuli.",
+      "Přidáme bílé víno a necháme odpařit.",
+      "Přidáme loupaná rajčata a za občasného míchání necháme zredukovat.",
+      "Přidáme oregano, česnek, bazalku a stáhneme na mírný plamen.",
+      "Dosolíme.",
+      "Přidáme cukr (pokud je potřeba).",
+      "Přidáme 1-2 lžíce vody se škrobem.",
+      "Zamícháme pastu a můžeme servírovat."
+    ],
+    "finish": [
+      "Ozdobíme hoblinami parmezánu."
+    ],
+    "url": "http://www.bonappetit.com/recipe/pasta-al-pomodoro"
   },
   {
     "id": 3,
     "category_id": 1,
-    "category": "Pasta",
     "name": "Spaghetti Aglio Olio e Peperoncino e Pancetta",
     "url": "http://www.sitalemvkuchyni.cz/recept/Aglio-olio-e-peperoncino"
+  },
+  {
+    "id": 4,
+    "category_id": 2,
+    "name": "Crema Catalana"
+  },
+  {
+    "id": 5,
+    "category_id": 4,
+    "name": "Risotto",
+    "time": 45,
+    "servings": 2,
+    "ingredients": [
+      "200g rýže (Arborio, Carnaroli, Vialone Nano)",
+      "100g cibule",
+      "3 polévkové lžíce tuku (máslo, oliv. olej)",
+      "1l kuřecího vývaru (naředený vodou)"
+    ],
+    "method": [
+      "Cibuli nakrájíme na jemno.",
+      "Na slabém plameni necháme na tuku se špetkou soli zesklovatět cibuli. Cca. 10 minut. Cibule může být do zlatava, ale nesmí zhnědnout.",
+      "Přilijeme asi 50ml horké tekutiny. Počkáme, až se kompletně odpaří.",
+      "Na středním plameni přidáme všechnu rýži (neoplachujeme). Obalíme olejem a za častého míchání několik minut pražíme. Na rýži se musí vytvořit průsvitná ochranná vrstva.",
+      "Můžeme přidat česnek (vaříme 30-60 vteřin).",
+      "Můžeme přidat 60ml vína a vaříme, dokuď se tekutina nevstřebá.",
+      "Na středně silném plameni 20-30 minut postupně přiléváme horký vývar. Tekutina musí stale bublat, často mícháme.",
+      "Sundáme z ohně, přidáme máslo a parmazán a necháme rozpustit."
+    ],
+    "finish": [
+      "Před servírováním bude možná třeba ještě přidat trošku tekutiny.",
+      "Servírujeme s parmezánem a pažitkou."
+    ]
   }
 ]

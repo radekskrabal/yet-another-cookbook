@@ -3,67 +3,81 @@ import { connect } from 'react-redux';
 
 import DisplayTable from './DisplayTable';
 import SearchBox from './SearchBox';
+import AppLink from '../app-link';
 import store from '../../store';
-import * as categoryApi from '../../api/category-api';
 import * as recipeApi from '../../api/recipe-api';
 import { searchRecipes } from "../../actions/recipe-actions";
 
-interface ISearchContainerProps {
-    categories: ICategory[];
+interface IRecipesContainerProps {
     recipes: IRecipe[];
     query: string;
+    category_id: number;
+    routeParams?: { categoryId: string }; // passed automatically
 }
 
-class SearchContainer extends React.Component<ISearchContainerProps, {}> {
+class RecipesContainer extends React.Component<IRecipesContainerProps, {}> {
     public render(): JSX.Element {
-        let recipes: IRecipe[] = this.searchRecipes(this.props.query);
+        if (this.props.recipes.length === 0) {
+            if (this.canToggleAllRecipes(this.props.category_id, this.props.query)) {
+                return (
+                    <div>
+                        <SearchBox query={this.props.query} setQuery={this.setQuery.bind(this)} />
+                        <div>No recipes found matching '{this.props.query}'. Try to search <AppLink to="/">All Recipes</AppLink>?</div>
+                    </div>
+                );
+            }
+
+            return (
+                <div>
+                    <SearchBox query={this.props.query} setQuery={this.setQuery.bind(this)} />
+                </div>
+            );
+        }
 
         return (
-            <div className="InstantBox">
-                <SearchBox query={this.props.query} setQuery={this.setQuery} />
-                <DisplayTable categories={this.props.categories} recipes={recipes} query={this.props.query} />
+            <div>
+                <SearchBox query={this.props.query} setQuery={this.setQuery.bind(this)} />
+                <DisplayTable recipes={this.props.recipes} query={this.props.query} />
             </div>
         );
     }
 
     public componentDidMount(): void {
-        categoryApi.getCategories();
-        recipeApi.getRecipes();
+        recipeApi.getRecipes().then(this.setQuery.bind(this));
     }
 
-    private setQuery(query: string): void {
-        store.dispatch(searchRecipes(query));
-    }
+    public componentDidUpdate(): void {
+        const categoryId = this.getCategoryId();
 
-    private searchRecipes(query: string = ''): IRecipe[] {
-        let result: IRecipe[] = [];
-        if (query !== '') {
-            for (let recipe of this.props.recipes) {
-                let { category, name } = recipe;
-
-                if ([ category, name ].some(str => str.toLowerCase().includes(query.toLowerCase()))) {
-                    result.push(recipe);
-                }
-            }
-        } else {
-            result = this.props.recipes;
+        if (categoryId !== this.props.category_id) {
+            store.dispatch(searchRecipes(this.props.query, categoryId));
         }
+    }
 
-        return result;
+    private canToggleAllRecipes(category_id: number, query: string): boolean {
+        return category_id !== null && query !== null;
+    }
+
+    private setQuery(query: string = null): void {
+        store.dispatch(searchRecipes(query, this.props.category_id));
+    }
+
+    private getCategoryId(): number {
+        return +this.props.routeParams.categoryId || null; // +undefined = NaN
     }
 }
 
-const mapStateToProps = (store: IStoreState): ISearchContainerProps => {
+const mapStateToProps = (store: IStoreState): IRecipesContainerProps => {
     return {
-        categories: store.categoryState.categories,
-        recipes: store.recipeState.recipes,
-        query: store.queryState.query
+        recipes: store.recipeState.filter.recipes,
+        query: store.recipeState.filter.query,
+        category_id: store.recipeState.filter.category_id
     };
 };
 
-export default connect(mapStateToProps)(SearchContainer);
+export default connect(mapStateToProps)(RecipesContainer);
 
-// Bootstrap
+// TODO: Use nice Bootstrap search field
 /* return (
     <div className="input-group col-md-4">
         <form className="navbar-form" role="search">

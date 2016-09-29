@@ -3,7 +3,7 @@ import { decorate } from './text'
 describe('text module', () => {
     it('should handle empty text and empty query', () => {
         expect(
-            decorate('', '')
+            decorate('', null)
         ).toEqual(
             ''
         );
@@ -19,7 +19,7 @@ describe('text module', () => {
 
     it('should handle empty query', () => {
         expect(
-            decorate('text', '')
+            decorate('text', null)
         ).toEqual(
             'text'
         );

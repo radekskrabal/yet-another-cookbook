@@ -2,5 +2,17 @@
   {
     "id": 1,
     "name": "Pasta"
+  },
+  {
+    "id": 2,
+    "name": "Desserts"
+  },
+  {
+    "id": 3,
+    "name": "Starters"
+  },
+  {
+    "id": 4,
+    "name": "Main Dishes"
   }
 ]

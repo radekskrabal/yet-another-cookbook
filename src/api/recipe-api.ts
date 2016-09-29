@@ -1,6 +1,6 @@
 import store from '../store';
 import { getRecipesSuccess, getRecipeSuccess } from '../actions/recipe-actions';
-import * as Http from '../modules/Http';
+import * as Http from '../modules/http';
 
 function sortRecipes(recipes: IRecipe[]): IRecipe[] {
     let compareRecipes = (a: IRecipe, b: IRecipe): number => {
@@ -18,8 +18,8 @@ function findRecipe(id: number, recipes: IRecipe[]): IRecipe {
     return recipes.find(r => r.id === id)
 }
 
-export function getRecipes(): void {
-    fetch('./data/recipes.json')
+export function getRecipes(): Promise<any> {
+    return fetch(Http.buildUrl('data/recipes.json'))
         .then(Http.parseJson)
         .then(sortRecipes)
         .then((recipes: IRecipe[]) => {
@@ -28,7 +28,7 @@ export function getRecipes(): void {
 }
 
 export function getRecipe(id: number): void {
-    fetch('./data/recipes.json')
+    fetch(Http.buildUrl('data/recipes.json'))
         .then(Http.parseJson)
         .then(sortRecipes)
         .then((recipes: IRecipe[]) => {

@@ -1,6 +1,40 @@
-import { isSuccess, parseJson } from './http'
+import { baseUrl, buildUrl, isSuccess, parseJson } from './http'
 
 describe('http module', () => {
+    describe('buildUrl(path?: string, baseUrl = baseUrl): string', () => {
+        it('should build', () => {
+            expect(
+                buildUrl('path', 'base/')
+            ).toEqual(
+                'base/path'
+            )
+        });
+
+        it('should build empty string', () => {
+            expect(
+                buildUrl('', '')
+            ).toEqual(
+                ''
+            )
+        });
+
+        it('should build for default base', () => {
+            expect(
+                buildUrl('path')
+            ).toEqual(
+                `${baseUrl}path`
+            )
+        });
+
+        it('should build for default path and default base', () => {
+            expect(
+                buildUrl()
+            ).toEqual(
+                baseUrl
+            )
+        });
+    });
+
     describe('isSuccess(status: number): boolean', () => {
         it('should handle 1xx informational status code', () => {
             expect(
@@ -53,13 +87,11 @@ describe('http module', () => {
         });
 
         // TODO: Use mocks for this test
-        /*
-        it('should not throw for success status code', () => {
-            expect(
-                parseJson(<Response>{ status: 200, statusText: 'Status Error' })
-            ).toEqual()
-        });
-        */
+        // it('should not throw for success status code', () => {
+        //    expect(
+        //        parseJson(<Response>{ status: 200, statusText: 'Status Error' })
+        //    ).toEqual()
+        //});
 
         it('should throw for 3xx redirection status code', () => {
             expect(
