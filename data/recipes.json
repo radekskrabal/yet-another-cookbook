@@ -110,5 +110,103 @@
       "Před servírováním bude možná třeba ještě přidat trošku tekutiny.",
       "Servírujeme s parmezánem a pažitkou."
     ]
+  },
+{
+    "id": 6,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Kakaový koláč",
+    "time": 60,
+    "servings": 1,
+    "ingredients": [
+      "240g polohrubé mouky",
+      "240g moučkového cukru",
+      "240g másla",
+      "6 vaječných žloutků",
+      "6 vaječných bílků na sníh",
+      "3 lžíce kakaa",
+      "1 kypřící prášek"
+    ],
+    "method": [
+      "Ve velké míse rozbijeme vaječné žloutky.",
+      "Přidáme mouku, moučkový cukr, máslo, kakao a kypřící prášek a spojíme.",
+      "Pomalu zapracujeme sníh a vylijeme na vymazaný plech.",
+      "Dáme do studené trouby péct na 160 stupňů. Pečeme cca. 30-35 minut."
+    ],
+    "finish": [
+      "Necháme pomalu vychladnout."
+    ]
+  },
+{
+    "id": 7,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Citronová poleva na koláč",
+    "time": 15,
+    "servings": 1,
+    "ingredients": [
+      "350g moučkového cukru",
+      "2 lžíce třtinového rumu",
+      "3 lžíce horké vody",
+      "5 lžic citronové šťávy"
+    ],
+    "method": [
+      "Ve střední míse smícháme rum, horkou vodu a citronovou šťávu.",
+      "Po lžících přimícháváme moučkový cukr"
+    ],
+    "finish": [
+      "Rychle namažeme na teplý koláč (poleva tuhne)."
+    ]
+  },
+{
+    "id": 8,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Křehké těsto na koláč",
+    "time": 15,
+    "servings": 1,
+    "ingredients": [
+      "300g hladké mouky",
+      "150g másla",
+      "100ml studené vody",
+      "špetka soli"
+    ],
+    "method": [
+      "Ve velké mise smícháme mouku, máslo a sůl a propracujeme.",
+      "Po částech přiléváme studenou vodu. Těsto je vždy zprvu blátivé lepivé, než se voda zapracuje.",
+      "Zabalíme do potravinové fólie a dáme odpočinout do lednice."
+    ],
+    "finish": [
+      "Vychlazené těsto rozválíme a můžeme rovnou péct."
+    ]
+  },
+  {
+    "id": 9,
+    "category_id": 4,
+    "category": "Hlavní chod",
+    "name": "Quiche Lorraine",
+    "time": 90,
+    "servings": 1,
+    "ingredients": [
+      "1 křehké těsto na koláč",
+      "250g britské slaniny",
+      "200g strouhaného Gruyere(příp. jiný švýrarský sýra)",
+      "1 cibule na jemno",
+      "4 rozšlehaná vejce",
+      "1 smetana",
+      "3/4 lžičky soli",
+      "1/4 lžičky třtinového cukru",
+      "1/8 lžičky kajenského pepře"
+    ],
+    "method": [
+      "Slaninu opečeme (10 na indukci) na pánvi do křupava. Poté pokrájíme na menší kousky.",
+      "Ve střední míse smícháme cibuli, vejce, smetanu, sůl, cukr a pepř.",
+      "Pečící nádobu vyložíme těstem. Na těsto postupně navršíme slaninu, tekutý mix a sýr.",
+      "Pečeme 20 minut na 220 stupňů, poté dalších 30 minut na 165 stupňů."
+    ],
+    "finish": [
+      "Necháme aspoň 15 minut odležet.",
+      "Podáváme studené či mírně teplé."
+    ]
   }
 ]
