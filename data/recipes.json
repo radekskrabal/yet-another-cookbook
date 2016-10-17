@@ -208,5 +208,35 @@
       "Necháme aspoň 15 minut odležet.",
       "Podáváme studené či mírně teplé."
     ]
+  },
+  {
+    "id": 10,
+    "category_id": 5,
+    "category": "Polévka",
+    "name": "Zeleninový vývar od KOKO",
+    "time": 200,
+    "servings": 8,
+    "ingredients": [
+      "4l vody",
+      "360g mrkve",
+      "320g celeru",
+      "200g kořenové petržele",
+      "600g cibule",
+      "240g řapíkatého celeru",
+      "80g rajčat",
+      "25g petrželky",
+      "12 kuliček černého pepře",
+      "8 kuliček nového koření",
+      "4 bobkové listy",
+      "2 lžíce oleje"
+    ],
+    "method": [
+      "Na oleji v hrnci osmahneme na plocho nakrájenou zeleninu (pro lepší barvu).",
+      "Táhneme přibližně 3 hodiny."
+    ],
+    "finish": [
+      "Dosolíme a dopepříme.",
+      "Servírujeme s domácími nudlemi."
+    ]
   }
 ]
