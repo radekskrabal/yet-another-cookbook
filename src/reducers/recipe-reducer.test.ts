@@ -1,5 +1,5 @@
-import * as actions from '../actions/action-types'
-import recipeReducer from './recipe-reducer'
+import * as actions from '../actions/action-types';
+import recipeReducer from './recipe-reducer';
 
 describe('recipe reducer', () => {
     it('should handle initial state', () => {

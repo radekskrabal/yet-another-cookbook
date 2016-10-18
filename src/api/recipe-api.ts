@@ -15,7 +15,7 @@ function sortRecipes(recipes: IRecipe[]): IRecipe[] {
 }
 
 function findRecipe(id: number, recipes: IRecipe[]): IRecipe {
-    return recipes.find(r => r.id === id)
+    return recipes.find(r => r.id === id);
 }
 
 export function getRecipes(): Promise<any> {

@@ -10,8 +10,8 @@ const config = {
         path: path.resolve("dist")
     },
     resolve: {
-        extensions: ["", ".ts", ".tsx", ".js", '.jsx'],
-        modulesDirectories: ['./src', './node_modules'],
+        extensions: [".ts", ".tsx", ".js", '.jsx'],
+        modulesDirectories: ['./src', './node_modules']
     },
     module: {
         loaders: [

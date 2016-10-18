@@ -6,8 +6,8 @@ const initialRecipesState: IRecipeState = {
     recipes: [],
     filter: { category_id: null, query: null }
 };
-const recipeReducer = (state: IRecipeState = initialRecipesState, action: any): IRecipeState => {
-    switch(action.type) {
+const recipeReducer = (state: IRecipeState = initialRecipesState, action: any = {}): IRecipeState => {
+    switch (action.type) {
         case actions.DISPLAY_RECIPE:
             let { recipe_id } = action;
 

@@ -9,4 +9,3 @@ export function getCategories(): void {
             store.dispatch(getCategoriesSuccess(categories));
         });
 }
-

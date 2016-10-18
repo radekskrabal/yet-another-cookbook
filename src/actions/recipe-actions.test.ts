@@ -1,5 +1,5 @@
-import * as actions from './action-types'
-import { getRecipeSuccess, getRecipesSuccess, createSetFilterAction } from './recipe-actions'
+import * as actions from './action-types';
+import { getRecipeSuccess, getRecipesSuccess, createSetFilterAction } from './recipe-actions';
 
 describe('recipe actions', () => {
     it('getRecipeSuccess should create GET_RECIPE_SUCCESS action', () => {

@@ -1,4 +1,4 @@
-import { baseUrl, buildUrl, isSuccess, parseJson } from './http'
+import { baseUrl, buildUrl, isSuccess, parseJson } from './http';
 
 describe('http module', () => {
     describe('buildUrl(path?: string, baseUrl = baseUrl): string', () => {
@@ -7,7 +7,7 @@ describe('http module', () => {
                 buildUrl('path', 'base/')
             ).toEqual(
                 'base/path'
-            )
+            );
         });
 
         it('should build empty string', () => {
@@ -15,7 +15,7 @@ describe('http module', () => {
                 buildUrl('', '')
             ).toEqual(
                 ''
-            )
+            );
         });
 
         it('should build for default base', () => {
@@ -23,7 +23,7 @@ describe('http module', () => {
                 buildUrl('path')
             ).toEqual(
                 `${baseUrl}path`
-            )
+            );
         });
 
         it('should build for default path and default base', () => {
@@ -31,7 +31,7 @@ describe('http module', () => {
                 buildUrl()
             ).toEqual(
                 baseUrl
-            )
+            );
         });
     });
 
@@ -91,7 +91,7 @@ describe('http module', () => {
         //    expect(
         //        parseJson(<Response>{ status: 200, statusText: 'Status Error' })
         //    ).toEqual()
-        //});
+        // });
 
         it('should throw for 3xx redirection status code', () => {
             expect(

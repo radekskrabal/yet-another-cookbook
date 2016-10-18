@@ -1,5 +1,5 @@
-import * as actions from '../actions/action-types'
-import categoryReducer from './category-reducer'
+import * as actions from '../actions/action-types';
+import categoryReducer from './category-reducer';
 
 describe('category reducer', () => {
     it('should handle initial state', () => {

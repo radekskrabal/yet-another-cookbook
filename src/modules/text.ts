@@ -1,6 +1,6 @@
 export function decorate(text: string, query: string, tagname = 'mark'): string {
     if (query === null) {
-        return text
+        return text;
     }
 
     let lcQuery = query.toLowerCase();
