@@ -7,9 +7,9 @@ describe('recipe reducer', () => {
             recipeReducer(undefined, {})
         ).toEqual(
             {
+                recipe: null,
                 recipes: [],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }
         );
     });
@@ -35,18 +35,18 @@ describe('recipe reducer', () => {
     it('should handle GET_RECIPES_SUCCESS for no recipes', () => {
         expect(
             recipeReducer({
+                recipe: null,
                 recipes: [],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }, {
                 type: actions.GET_RECIPES_SUCCESS,
                 recipes: []
             })
         ).toEqual(
             {
+                recipe: null,
                 recipes: [],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }
         );
     });
@@ -54,9 +54,9 @@ describe('recipe reducer', () => {
     it('should handle GET_RECIPES_SUCCESS for new recipe', () => {
         expect(
             recipeReducer({
+                recipe: null,
                 recipes: [],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }, {
                 type: actions.GET_RECIPES_SUCCESS,
                 recipes: [
@@ -65,11 +65,11 @@ describe('recipe reducer', () => {
             })
         ).toEqual(
             {
+                recipe: null,
                 recipes: [
                     {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara'}
                 ],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }
         );
     });
@@ -77,11 +77,11 @@ describe('recipe reducer', () => {
     it('should handle GET_RECIPES_SUCCESS for replaced recipes', () => {
         expect(
             recipeReducer({
+                recipe: null,
                 recipes: [
                     {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ '4 egg yolks' ], method: [ 'Start boiling the water.' ]}
                 ],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }, {
                 type: actions.GET_RECIPES_SUCCESS,
                 recipes: [
@@ -91,12 +91,12 @@ describe('recipe reducer', () => {
             })
         ).toEqual(
             {
+                recipe: null,
                 recipes: [
                     {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ '4 egg yolks' ], method: [ 'Start boiling the water.' ]},
                     {id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro', servings: 1, time: 15, ingredients: [ '4 tomatoes' ], method: [ 'Start boiling the water.' ]}
                 ],
-                filter: { category_id: null, query: null, recipes: [] },
-                filterById: { recipe_id: null, recipe: null }
+                filter: { category_id: null, query: null }
             }
         );
     });

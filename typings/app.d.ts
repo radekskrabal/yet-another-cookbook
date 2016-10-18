@@ -3,22 +3,15 @@ interface ICategoryState {
 }
 
 interface IRecipeState {
-    recipes: IRecipe[];
-    filter: IRecipeFilterState;
-    filterById: IRecipeFilterById;
+    recipe: IRecipe; // recipe detail to display
+    recipes: IRecipe[]; // list of recipes to display
+    filter: IRecipeFilter;
 }
 
 // global filter
-interface IRecipeFilterState {
+interface IRecipeFilter {
     category_id: number;
     query: string;
-    recipes: IRecipe[];
-}
-
-// recipe detail
-interface IRecipeFilterById {
-    recipe_id: number;
-    recipe: IRecipe;
 }
 
 interface IStoreState {

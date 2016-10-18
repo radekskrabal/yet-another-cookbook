@@ -51,8 +51,8 @@ export default function(props: IRecipeContainerProps): JSX.Element {
     }
 
     return (
-        <article key={props.recipe_id} className="recipe">
-            <img src={Http.buildUrl(`img/recipes/${props.recipe_id}.jpg`)} />
+        <article key={props.recipe.id} className="recipe">
+            <img src={Http.buildUrl(`img/recipes/${props.recipe.id}.jpg`)} />
             <h2>{props.recipe.name}</h2>
             <em className="text-muted">{props.recipe.category}</em>
             <span className="servings">{props.recipe.servings} porce</span><br />

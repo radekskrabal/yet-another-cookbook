@@ -2,44 +2,57 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import RecipeView from './RecipeView';
-import store from '../../store';
-import { displayRecipe } from "../../actions/recipe-actions";
+import { createDisplayRecipeAction } from "../../actions/recipe-actions";
 
 
 export interface IRecipeContainerProps {
-    recipe_id: number;
     recipe: IRecipe;
     routeParams?: { recipeId: string }; // passed automatically
 }
 
-class RecipeContainer extends React.Component<IRecipeContainerProps, {}> {
+interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
+    displayRecipe: (action: any) => void;
+}
+
+class RecipeContainer extends React.Component<IRecipeContainerProps & IDispatchProps, {}> {
     public render(): JSX.Element {
         return (
-            <RecipeView recipe_id={this.props.recipe_id} recipe={this.props.recipe} />
+            <RecipeView recipe={this.props.recipe} />
         );
     }
 
     public componentDidMount(): void {
-        store.dispatch(displayRecipe(this.getCurrentPageId()));
+        this.props.displayRecipe(
+            createDisplayRecipeAction(this.parseRecipeId())
+        );
     }
 
     public componentDidUpdate(): void {
-        const currentPageId = this.getCurrentPageId();
-        if (currentPageId !== this.props.recipe_id) {
-            store.dispatch(displayRecipe(currentPageId));
+        const recipeId = this.parseRecipeId();
+        if (recipeId !== this.props.recipe.id) {
+            this.props.displayRecipe(
+              createDisplayRecipeAction(recipeId)
+            );
         }
     }
 
-    private getCurrentPageId(): number {
+    private parseRecipeId(): number {
         return +this.props.routeParams.recipeId;
     }
 }
 
 const mapStateToProps = (store: IStoreState): IRecipeContainerProps => {
     return {
-        recipe_id: store.recipeState.filterById.recipe_id,
-        recipe: store.recipeState.filterById.recipe
+        recipe: store.recipeState.recipe
     };
 };
 
-export default connect(mapStateToProps)(RecipeContainer);
+const mapDispatchToProps = (dispatch: Redux.Dispatch<void>) => {
+    return {
+        displayRecipe: (action: any): void => {
+            dispatch(action);
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeContainer);

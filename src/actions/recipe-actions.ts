@@ -1,6 +1,6 @@
 import * as actions from '../actions/action-types';
 
-export function displayRecipe(recipe_id: number) {
+export function createDisplayRecipeAction(recipe_id: number) {
     return {
         type: actions.DISPLAY_RECIPE,
         recipe_id
@@ -21,9 +21,9 @@ export function getRecipesSuccess(recipes: IRecipe[]) {
     };
 }
 
-export function searchRecipes(query: string, category_id: number) {
+export function createSetFilterAction(query: string, category_id: number) {
     return {
-        type: actions.SEARCH_RECIPES,
+        type: actions.SET_FILTER,
         query,
         category_id
     };

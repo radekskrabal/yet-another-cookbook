@@ -1,5 +1,5 @@
 import * as actions from './action-types'
-import { getRecipeSuccess, getRecipesSuccess, searchRecipes } from './recipe-actions'
+import { getRecipeSuccess, getRecipesSuccess, createSetFilterAction } from './recipe-actions'
 
 describe('recipe actions', () => {
     it('getRecipeSuccess should create GET_RECIPE_SUCCESS action', () => {
@@ -20,11 +20,11 @@ describe('recipe actions', () => {
         });
     });
 
-    it('searchRecipes should create SEARCH_RECIPES action', () => {
+    it('searchRecipes should create SET_FILTER action', () => {
         const query = '';
         const category_id = 0;
-        expect(searchRecipes(query, category_id)).toEqual({
-            type: actions.SEARCH_RECIPES,
+        expect(createSetFilterAction(query, category_id)).toEqual({
+            type: actions.SET_FILTER,
             query,
             category_id
         });
