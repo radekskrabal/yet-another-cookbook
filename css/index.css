@@ -10,11 +10,24 @@ header img {
 }
 
 header h1 {
+    clear: right;
     font-size: 4rem;
 }
 
 header p {
     margin-left: 5rem;
+}
+
+header .dropdown li {
+    list-style-position: inside;
+}
+
+header .dropdown li.add-category {
+    list-style-image: url('../img/category.png');
+}
+
+header .dropdown li.add-recipe {
+    list-style-image: url('../img/recipe.png');
 }
 
 aside a {

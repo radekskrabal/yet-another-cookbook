@@ -6,7 +6,6 @@ import router from './router';
 import store from './store';
 
 const rootEl = document.getElementById('react-app-container');
-
 ReactDOM.render((
     <Provider store={store}>
         {router}
