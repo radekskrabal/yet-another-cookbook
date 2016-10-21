@@ -4,7 +4,7 @@ import { IRecipeContainerProps } from './RecipeContainer';
 import * as Http from "../../modules/http";
 
 const generateIngredients = (ingredients: string[]): JSX.Element => {
-    const items = ingredients.map(m => <li>{m}</li>);
+    const items = ingredients.map((m, i) => <li key={i}>{m}</li>);
     return (
         <section>
             <h3>Ingredience</h3>
@@ -16,7 +16,7 @@ const generateIngredients = (ingredients: string[]): JSX.Element => {
 };
 
 const generateMethod = (method: string[]): JSX.Element => {
-    const steps = method.map(m => <li>{m}</li>);
+    const steps = method.map((m, i) => <li key={i}>{m}</li>);
     return (
         <section>
             <h3>Postup</h3>
@@ -32,7 +32,7 @@ const generateFinish = (finish: string[]): JSX.Element => {
         return;
     }
 
-    const steps = finish.map(f => <li>{f}</li>);
+    const steps = finish.map((f, i) => <li key={i}>{f}</li>);
     return (
         <section>
             <h3>Servírování</h3>
