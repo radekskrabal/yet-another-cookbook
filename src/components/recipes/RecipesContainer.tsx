@@ -8,7 +8,7 @@ import * as recipeApi from '../../api/recipe-api';
 import { createSetFilterAction } from '../../actions/filter-actions';
 import * as route from '../../modules/route';
 import { findRecipes } from '../../modules/recipe';
-import { recipeParam } from '../../router';
+import {categoryParam} from '../../router';
 
 interface IRecipesContainerProps {
     recipes: IRecipe[];
@@ -54,7 +54,7 @@ class RecipesContainer extends React.Component<IRecipesContainerProps & IDispatc
     }
 
     public componentDidUpdate(): void {
-        const categoryId = route.parseNumberParam(recipeParam, this.props.routeParams);
+        const categoryId = route.parseNumberParam(categoryParam, this.props.routeParams);
 
         if (categoryId !== this.props.category_id) {
             this.props.setFilter(createSetFilterAction(categoryId, this.props.query, null));

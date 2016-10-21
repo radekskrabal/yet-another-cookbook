@@ -6,7 +6,7 @@ import AppLink from '../app-link';
 export default function(props: { categories: ICategory[] }): JSX.Element {
     let links = props.categories.map(category => {
         return (
-            <Category category={category} />
+            <Category key={category.id} category={category} />
         );
     });
     return (
