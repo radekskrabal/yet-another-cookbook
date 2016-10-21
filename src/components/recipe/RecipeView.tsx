@@ -1,10 +1,9 @@
 import * as React from 'react';
 
-import { IRecipeContainerProps } from './RecipeContainer';
 import * as Http from "../../modules/http";
 
-const generateIngredients = (ingredients: string[]): JSX.Element => {
-    const items = ingredients.map((m, i) => <li key={i}>{m}</li>);
+const generateIngredients = (ingredients: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
+    const items = ingredients.map((m, i) => <li className={m.done ? 'done' : ''} key={i} onClick={() => toggle(i) }>{m.text}</li>);
     return (
         <section>
             <h3>Ingredience</h3>
@@ -15,8 +14,8 @@ const generateIngredients = (ingredients: string[]): JSX.Element => {
     );
 };
 
-const generateMethod = (method: string[]): JSX.Element => {
-    const steps = method.map((m, i) => <li key={i}>{m}</li>);
+const generateMethod = (method: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
+    const steps = method.map((m, i) => <li className={m.done ? 'done' : ''} key={i} onClick={() => toggle(i) }>{m.text}</li>);
     return (
         <section>
             <h3>Postup</h3>
@@ -27,12 +26,8 @@ const generateMethod = (method: string[]): JSX.Element => {
     );
 };
 
-const generateFinish = (finish: string[]): JSX.Element => {
-    if (finish === undefined || finish.length === 0) {
-        return;
-    }
-
-    const steps = finish.map((f, i) => <li key={i}>{f}</li>);
+const generateFinish = (finish: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
+    const steps = finish.map((f, i) => <li className={f.done ? 'done' : ''} key={i} onClick={() => toggle(i)}>{f.text}</li>);
     return (
         <section>
             <h3>Servírování</h3>
@@ -43,13 +38,7 @@ const generateFinish = (finish: string[]): JSX.Element => {
     );
 };
 
-export default function(props: IRecipeContainerProps): JSX.Element {
-    if (props.recipe === null) {
-        return (
-            <article />
-        );
-    }
-
+export default function(props: { recipe: IRecipe, toggleIngredient: (position: number) => void, toggleMethod: (position: number) => void, toggleFinish: (position: number) => void }): JSX.Element {
     return (
         <article key={props.recipe.id} className="recipe">
             <img src={Http.buildUrl(`img/recipes/${props.recipe.id}.jpg`)} />
@@ -57,9 +46,9 @@ export default function(props: IRecipeContainerProps): JSX.Element {
             <em className="text-muted">{props.recipe.category}</em>
             <span className="servings">{props.recipe.servings} porce</span><br />
             <span className="time">{props.recipe.time} minut</span>
-            { generateIngredients(props.recipe.ingredients) }
-            { generateMethod(props.recipe.method) }
-            { generateFinish(props.recipe.finish) }
+            { generateIngredients(props.recipe.ingredients, props.toggleIngredient) }
+            { generateMethod(props.recipe.method, props.toggleMethod) }
+            { generateFinish(props.recipe.finish, props.toggleFinish) }
         </article>
     );
 }

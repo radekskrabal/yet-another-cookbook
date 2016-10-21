@@ -50,7 +50,7 @@ describe('recipe reducer', () => {
         expect(
             recipeReducer({
                 recipes: [
-                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ '4 egg yolks' ], method: [ 'Start boiling the water.' ]}
+                    {id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 1, time: 15, ingredients: [ { text: '4 egg yolks', done: false } ], method: [ { text: 'Start boiling the water.', done: false } ], finish: [ { text: 'Eat it!', done: false } ]}
                 ]
             }, {
                 type: actions.GET_RECIPES_SUCCESS,

@@ -2,7 +2,28 @@ export function findRecipeById(id: number, recipes: IRecipe[]): IRecipe {
     return recipes.find(r => r.id === id) || null;
 };
 
-export function sortRecipes(a: IRecipe, b: IRecipe): number {
+export function decorateRecipes(recipes: any[]): IRecipe[] { // TODO: Test
+    return recipes.map(r => {
+        r.ingredients = r.ingredients.map((i: string) => makeDoable(i));
+        r.method = r.method.map((i: string) => makeDoable(i));
+        r.finish = r.finish.map((i: string) => makeDoable(i));
+
+        return r;
+    });
+}
+
+export function makeDoable(text: string): IDoableItem { // TODO: Test
+    return {
+        text,
+        done: false
+    };
+};
+
+export function sortRecipes(recipes: IRecipe[]): IRecipe[] { // TODO: Test
+    return recipes.sort(recipeSorter);
+}
+
+export function recipeSorter(a: IRecipe, b: IRecipe): number {
     if (a.category !== b.category) {
         return a.category > b.category ? 1 : -1;
     }
@@ -26,3 +47,24 @@ export function matchRecipe(recipe: IRecipe, category_id: number, query: string)
     let { category, name } = recipe;
     return [ category, name ].some(str => str.toLowerCase().includes(query.toLowerCase()))
 };
+
+export function toggleFinish(recipe: IRecipe, index: number): IRecipe {
+    let toggled = Object.assign({}, recipe);
+    toggled.finish[index]['done'] = !toggled.finish[index]['done'];
+
+    return toggled;
+}
+
+export function toggleIngredient(recipe: IRecipe, index: number): IRecipe {
+    let toggled = Object.assign({}, recipe);
+    toggled.ingredients[index]['done'] = !toggled.ingredients[index]['done'];
+
+    return toggled;
+}
+
+export function toggleMethod(recipe: IRecipe, index: number): IRecipe {
+    let toggled = Object.assign({}, recipe);
+    toggled.method[index]['done'] = !toggled.method[index]['done'];
+
+    return toggled;
+}

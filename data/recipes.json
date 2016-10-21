@@ -71,6 +71,7 @@
     "servings": 2,
     "ingredients": [],
     "method": [],
+    "finish": [],
     "url": "http://www.sitalemvkuchyni.cz/recept/Aglio-olio-e-peperoncino"
   },
   {
@@ -81,7 +82,8 @@
     "time": 60,
     "servings": 2,
     "ingredients": [],
-    "method": []
+    "method": [],
+    "finish": []
   },
   {
     "id": 5,

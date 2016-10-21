@@ -1,9 +1,9 @@
-import {findRecipeById, sortRecipes, findRecipes} from './recipe';
+import {findRecipeById, recipeSorter, findRecipes} from './recipe';
 
 describe('recipe module', () => {
-    const recipe = { id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 2, time: 30, ingredients: <string[]>[], method: <string[]>[] };
-    const recipe2 = { id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro', servings: 2, time: 30, ingredients: <string[]>[], method: <string[]>[] };
-    const recipe3 = { id: 3, category_id: 2, category: 'Polévka', name: 'Zeleninový vývar', servings: 6, time: 200, ingredients: <string[]>[], method: <string[]>[] };
+    const recipe = { id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 2, time: 30, ingredients: <IDoableItem[]>[], method: <IDoableItem[]>[], finish: <IDoableItem[]>[] };
+    const recipe2 = { id: 2, category_id: 1, category: 'Pasta', name: 'Spaghetti Pomodoro', servings: 2, time: 30, ingredients: <IDoableItem[]>[], method: <IDoableItem[]>[], finish: <IDoableItem[]>[] };
+    const recipe3 = { id: 3, category_id: 2, category: 'Polévka', name: 'Zeleninový vývar', servings: 6, time: 200, ingredients: <IDoableItem[]>[], method: <IDoableItem[]>[], finish: <IDoableItem[]>[] };
 
     describe('findRecipeById', () => {
         it('should not find recipe in empty recipes', () => {
@@ -31,10 +31,10 @@ describe('recipe module', () => {
         });
     });
 
-    describe('sortRecipes', () => {
+    describe('recipeSorter', () => {
         it('should sort recipes by name', () => {
             expect(
-                sortRecipes(recipe2, recipe)
+                recipeSorter(recipe2, recipe)
             ).toEqual(
                 1
             );
@@ -42,7 +42,7 @@ describe('recipe module', () => {
 
         it('should preserve recipes sort by name', () => {
             expect(
-                sortRecipes(recipe, recipe2)
+                recipeSorter(recipe, recipe2)
             ).toEqual(
                 -1
             );
@@ -50,7 +50,7 @@ describe('recipe module', () => {
 
         it('should sort recipes by category', () => {
             expect(
-                sortRecipes(recipe3, recipe)
+                recipeSorter(recipe3, recipe)
             ).toEqual(
                 1
             );
@@ -58,7 +58,7 @@ describe('recipe module', () => {
 
         it('should preserve recipes by category', () => {
             expect(
-                sortRecipes(recipe, recipe3)
+                recipeSorter(recipe, recipe3)
             ).toEqual(
                 -1
             );

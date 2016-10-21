@@ -60,6 +60,10 @@ article h2 {
     margin-bottom: 1.5rem;
 }
 
+.recipe li.done {
+    text-decoration: line-through;
+}
+
 .recipe .time {
     padding-left: 3rem;
     font-size: 1.8rem;

@@ -25,6 +25,11 @@ interface ICategory {
     name: string;
 }
 
+interface IDoableItem {
+    text: string;
+    done: boolean;
+}
+
 interface IRecipe {
     id: number;
     category_id: number;
@@ -32,8 +37,8 @@ interface IRecipe {
     name: string;
     servings: number;
     time: number;
-    ingredients: string[];
-    method: string[];
-    finish?: string[];
+    ingredients: IDoableItem[];
+    method: IDoableItem[];
+    finish: IDoableItem[];
     url?: string;
 }
