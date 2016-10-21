@@ -3,20 +3,20 @@ interface ICategoryState {
 }
 
 interface IRecipeState {
-    recipe: IRecipe; // recipe detail to display
-    recipes: IRecipe[]; // list of recipes to display
-    filter: IRecipeFilter;
+    recipes: IRecipe[];
 }
 
 // global filter
-interface IRecipeFilter {
+interface IFilterState {
     category_id: number;
     query: string;
+    recipe_id: number;
 }
 
 interface IStoreState {
     categoryState: ICategoryState;
     recipeState: IRecipeState;
+    filterState: IFilterState;
 }
 
 /* JSON data */

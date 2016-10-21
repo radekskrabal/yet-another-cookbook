@@ -5,7 +5,10 @@ import DisplayTable from './DisplayTable';
 import SearchBox from './SearchBox';
 import AppLink from '../app-link';
 import * as recipeApi from '../../api/recipe-api';
-import { createSetFilterAction } from '../../actions/recipe-actions';
+import { createSetFilterAction } from '../../actions/filter-actions';
+import * as route from '../../modules/route';
+import { findRecipes } from '../../modules/recipe';
+import { recipeParam } from '../../router';
 
 interface IRecipesContainerProps {
     recipes: IRecipe[];
@@ -51,38 +54,17 @@ class RecipesContainer extends React.Component<IRecipesContainerProps & IDispatc
     }
 
     public componentDidUpdate(): void {
-        const categoryId = this.parseCategoryId();
+        const categoryId = route.parseNumberParam(recipeParam, this.props.routeParams);
 
         if (categoryId !== this.props.category_id) {
-            this.props.setFilter(createSetFilterAction(this.props.query, categoryId));
+            this.props.setFilter(createSetFilterAction(categoryId, this.props.query, null));
         }
     }
 
     private setQuery(query: string = null): void {
-        this.props.setFilter(createSetFilterAction(query, this.props.category_id));
-    }
-
-    private parseCategoryId(): number {
-        return +this.props.routeParams.categoryId || null; // +undefined = NaN
+        this.props.setFilter(createSetFilterAction(this.props.category_id, query, null));
     }
 }
-
-const searchRecipes = (recipes: IRecipe[], filter: IRecipeFilter): IRecipe[] => {
-    return recipes.filter(r => matchRecipe(r, filter.category_id, filter.query));
-};
-
-const matchRecipe = (recipe: IRecipe, category_id: number, query: string): boolean => {
-    if (category_id !== null && recipe.category_id !== category_id) {
-        return false;
-    }
-
-    if (query === null) {
-        return true;
-    }
-
-    let { category, name } = recipe;
-    return [ category, name ].some(str => str.toLowerCase().includes(query.toLowerCase()))
-};
 
 const canToggleAllRecipes = (category_id: number, query: string): boolean => {
     return category_id !== null && query !== null;
@@ -90,12 +72,12 @@ const canToggleAllRecipes = (category_id: number, query: string): boolean => {
 
 const mapStateToProps = (store: IStoreState): IRecipesContainerProps => {
     return {
-        recipes: searchRecipes(
+        recipes: findRecipes(
             store.recipeState.recipes,
-            store.recipeState.filter
+            store.filterState
         ),
-        query: store.recipeState.filter.query,
-        category_id: store.recipeState.filter.category_id
+        query: store.filterState.query,
+        category_id: store.filterState.category_id
     };
 };
 

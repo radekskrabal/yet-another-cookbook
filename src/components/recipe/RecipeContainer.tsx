@@ -2,8 +2,10 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import RecipeView from './RecipeView';
-import { createDisplayRecipeAction } from "../../actions/recipe-actions";
-
+import { createSetFilterAction } from '../../actions/filter-actions';
+import { findRecipeById } from '../../modules/recipe';
+import * as route from '../../modules/route';
+import { recipeParam } from '../../router';
 
 export interface IRecipeContainerProps {
     recipe: IRecipe;
@@ -11,7 +13,7 @@ export interface IRecipeContainerProps {
 }
 
 interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
-    displayRecipe: (action: any) => void;
+    setFilter: (action: any) => void;
 }
 
 class RecipeContainer extends React.Component<IRecipeContainerProps & IDispatchProps, {}> {
@@ -22,34 +24,30 @@ class RecipeContainer extends React.Component<IRecipeContainerProps & IDispatchP
     }
 
     public componentDidMount(): void {
-        this.props.displayRecipe(
-            createDisplayRecipeAction(this.parseRecipeId())
+        this.props.setFilter(
+            createSetFilterAction(null, null, route.parseNumberParam(recipeParam, this.props.routeParams))
         );
     }
 
     public componentDidUpdate(): void {
-        const recipeId = this.parseRecipeId();
+        const recipeId = route.parseNumberParam(recipeParam, this.props.routeParams);
         if (recipeId !== this.props.recipe.id) {
-            this.props.displayRecipe(
-              createDisplayRecipeAction(recipeId)
+            this.props.setFilter(
+                createSetFilterAction(null, null, recipeId)
             );
         }
-    }
-
-    private parseRecipeId(): number {
-        return +this.props.routeParams.recipeId;
     }
 }
 
 const mapStateToProps = (store: IStoreState): IRecipeContainerProps => {
     return {
-        recipe: store.recipeState.recipe
+        recipe: findRecipeById(store.filterState.recipe_id, store.recipeState.recipes)
     };
 };
 
 const mapDispatchToProps = (dispatch: Redux.Dispatch<void>) => {
     return {
-        displayRecipe: (action: any): void => {
+        setFilter: (action: any): void => {
             dispatch(action);
         }
     }

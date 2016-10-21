@@ -18,6 +18,8 @@
     "./src/actions/action-types.ts",
     "./src/actions/category-actions.ts",
     "./src/actions/category-actions.test.ts",
+    "./src/actions/filter-actions.ts",
+    "./src/actions/filter-actions.test.ts",
     "./src/actions/recipe-actions.ts",
     "./src/actions/recipe-actions.test.ts",
 
@@ -32,12 +34,18 @@
 
     "./src/modules/http.ts",
     "./src/modules/http.test.ts",
+    "./src/modules/recipe.ts",
+    "./src/modules/recipe.test.ts",
+    "./src/modules/route.ts",
+    "./src/modules/route.test.ts",
     "./src/modules/text.ts",
     "./src/modules/text.test.ts",
 
     "./src/reducers/index.ts",
     "./src/reducers/category-reducer.ts",
     "./src/reducers/category-reducer.test.ts",
+    "./src/reducers/filter-reducer.ts",
+    "./src/reducers/filter-reducer.test.ts",
     "./src/reducers/recipe-reducer.ts",
     "./src/reducers/recipe-reducer.test.ts"
   ]

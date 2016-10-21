@@ -11,17 +11,20 @@ const browserHistory = useRouterHistory(createHistory)({
     basename: buildUrl()
 });
 
+export const categoryParam = 'categoryId';
+export const recipeParam = 'recipeId';
+
 export default (
     <Router history={browserHistory}>
         <Route component={MainLayout}>
             <Route path="/" component={RecipesContainer} />
 
             <Route path="recipes">
-                <Route path=":recipeId" component={RecipeContainer} />
+                <Route path={`:${recipeParam}`} component={RecipeContainer} />
             </Route>
 
             <Route path="categories">
-                <Route path=":categoryId/recipes" component={RecipesContainer} />
+                <Route path={`:${categoryParam}/recipes`} component={RecipesContainer} />
             </Route>
         </Route>
     </Router>
