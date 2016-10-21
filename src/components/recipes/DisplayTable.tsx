@@ -15,8 +15,10 @@ export default function (props: IDisplayTableProps): JSX.Element {
         // TODO: Refactor into row component
         return (
             <article key={id}>
-                <img src={Http.buildUrl(`img/recipes/${id}.jpg`)} />
-                <AppLink dangerouslySetInnerHTML={{ __html: Text.decorate(name, props.query) }} to={'/recipes/' + id} />
+                <AppLink to={'/recipes/' + id}>
+                    <img src={Http.buildUrl(`img/recipes/${id}.jpg`)} />
+                    <h2 dangerouslySetInnerHTML={{ __html: Text.decorate(name, props.query) }} />
+                </AppLink>
                 <em className="text-muted" dangerouslySetInnerHTML={{ __html: Text.decorate(category, props.query) }} />
             </article>
         );
