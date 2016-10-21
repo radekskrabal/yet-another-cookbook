@@ -5,7 +5,7 @@ import * as Http from '../modules/http';
 function sortRecipes(recipes: IRecipe[]): IRecipe[] {
     let compareRecipes = (a: IRecipe, b: IRecipe): number => {
         if (a.category !== b.category) {
-            return a.category > b.category ? -1 : 1;
+            return a.category > b.category ? 1 : -1;
         }
 
         return a.name > b.name ? 1 : -1;
