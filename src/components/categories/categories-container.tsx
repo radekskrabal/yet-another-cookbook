@@ -8,7 +8,11 @@ export interface ICategoriesContainerProps {
     categories: ICategory[];
 }
 
-class CategoriesContainer extends React.Component<ICategoriesContainerProps, {}> {
+interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
+    dispatch: Redux.Dispatch<void>; // mapDispatchToProps is called internally
+}
+
+class CategoriesContainer extends React.Component<ICategoriesContainerProps & IDispatchProps, {}> {
     public render(): JSX.Element {
         return (
             <CategoriesView categories={this.props.categories} />
@@ -16,7 +20,7 @@ class CategoriesContainer extends React.Component<ICategoriesContainerProps, {}>
     }
 
     public componentDidMount(): void {
-        categoryApi.getCategories();
+        categoryApi.getCategories(this.props.dispatch);
     }
 }
 

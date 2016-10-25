@@ -19,6 +19,7 @@ interface IRecipesContainerProps {
 }
 
 interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
+    dispatch: Redux.Dispatch<void>;
     setFilter: (action: any) => void;
 }
 
@@ -50,7 +51,7 @@ class RecipesContainer extends React.Component<IRecipesContainerProps & IDispatc
     }
 
     public componentDidMount(): void {
-        recipeApi.getRecipes().then(this.setQuery.bind(this));
+        recipeApi.getRecipes(this.props.dispatch).then(this.setQuery.bind(this));
     }
 
     public componentDidUpdate(): void {
@@ -83,6 +84,7 @@ const mapStateToProps = (store: IStoreState): IRecipesContainerProps => {
 
 const mapDispatchToProps = (dispatch: Redux.Dispatch<void>): IDispatchProps => {
     return {
+        dispatch,
         setFilter: (action: any): void => { dispatch(action); }
     };
 };
