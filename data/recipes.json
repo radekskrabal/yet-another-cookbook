@@ -240,5 +240,73 @@
       "Dosolíme a dopepříme.",
       "Servírujeme s domácími nudlemi."
     ]
+  },
+  {
+    "id": 11,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Cheesecake",
+    "time": 90,
+    "servings": 6,
+    "ingredients": [
+      "150g rozemletých kakaových sušenek",
+      "75g rozpuštěného másla",
+      "500g mascarpone",
+      "2.5 lžíce citronové šťávy",
+      "100g moučkového cukru",
+      "2 vejce",
+      "1 lžíce bramborového či kukuřičného škrobu",
+      "1 lžička vanilkového extraktu"
+    ],
+    "method": [
+      "Rozpálíme troubu na 175 stupňů.",
+      "Vymažeme 20cm pečící formu máslem.",
+      "Máslo dáme rozehřát do rendlíku či pánve.",
+      "V robotu na led rozdrtíme kakaové sušenky.",
+      "Uhněteme krustu z rozemletých sušenek a rozpuštěného másla. Naklademe do pečící formy a dáme na cca. 8-10 minut péct.",
+      "Mezitím smícháme mascarpone, citronovou šťávu, cukr, vejce, škrob a vanilkový extrakt.",
+      "Upečenou krustu necháme mírně zchladit.",
+      "Naklademe mix a pečeme cca. 45-60 minut na 175 stupňů."
+    ],
+    "finish": [
+      "Necháme 1 hodinu vychladnout v otevřené troubě.",
+      "Poté necháme 4 hodiny ztuhnout v lednici."
+    ]
+  },
+  {
+    "id": 12,
+    "category_id": 4,
+    "category": "Hlavní chod",
+    "name": "Lehká svíčková od KOKO",
+    "time": 45,
+    "servings": 2,
+    "ingredients": [
+      "2x 150g rump steak z Argentiny",
+      "10g másla na zeleninu",
+      "10g másla na steak",
+      "38g celeru",
+      "38g mrkve",
+      "25g kořenové petržele",
+      "32g červené cibule",
+      "1 plátek uzené slaniny",
+      "175g hovězího vývaru",
+      "50g kysané smetany",
+      "1 lžíce citronové šťávy",
+      "1 menší lžička dijonské hořčice",
+      "tymián",
+      "sůl",
+      "pepř"
+    ],
+    "method": [
+      "Maso naložíme ideálně den předem do solného nálevu se zeleninou a kořením.",
+      "Zeleninu a slaninu pokrájíme na malé kusy, aby byla rychleji hotová.",
+      "Na másle v pánvi začneme opákat celer, mrkev a petržel.",
+      "Když zelenina začne zlátnout, přidáme ještě cibuli a slaninu.",
+      "Mezitím na pánvi zatahujeme maso a necháme dopéct na 125 stupňů v troubě.",
+      "K zelenině přilijeme vývar. Přidáme tymián, osolíme, opepříme a necháme pod pokličkou 10-15 minut vařit do měkka.",
+      "Maso necháme 5 minut odpočinout v alu fólii překryté máslem.",
+      "Omáčku stáhneme z plamene a přidáme hořčici, citronovou šťávu, zakysanou smetanu. Rozmixujeme a můžeme servírovat."
+    ],
+    "finish": []
   }
 ]
