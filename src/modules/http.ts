@@ -1,4 +1,4 @@
-export const baseUrl = '/Playground/yet-another-cookbook/';
+export const baseUrl = window.location.hostname.indexOf('localhost') !== -1 ? '/Playground/yet-another-cookbook/' : '/'; // TODO: Improve
 
 export function buildUrl(path: string = '', base: string = baseUrl): string {
     return `${base}${path}`;
