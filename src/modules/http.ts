@@ -1,7 +1,7 @@
-export const baseUrl = isLocalhost() ? '/Playground/yet-another-cookbook/' : '/'; // TODO: Improve
+export const baseUrl = isLocalhost(window.location) ? '/Playground/yet-another-cookbook/' : '/'; // TODO: Improve
 
-export function isLocalhost(): boolean {
-    return window.location.hostname.indexOf('localhost') !== -1;
+export function isLocalhost(location: Location): boolean {
+    return location.hostname.indexOf('localhost') !== -1;
 }
 
 export function buildUrl(path: string = '', base: string = baseUrl): string {

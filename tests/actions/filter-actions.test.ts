@@ -1,5 +1,5 @@
-import * as actions from './action-types';
-import { createSetFilterAction } from './filter-actions';
+import * as actions from '../../src/actions/action-types';
+import { createSetFilterAction } from '../../src/actions/filter-actions';
 
 it('searchRecipes should create SET_FILTER action', () => {
     const category_id: number = null;

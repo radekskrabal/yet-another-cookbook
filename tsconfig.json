@@ -15,13 +15,11 @@
     "./typings/app.d.ts",
 
     "./src/app.tsx",
+
     "./src/actions/action-types.ts",
     "./src/actions/category-actions.ts",
-    "./src/actions/category-actions.test.ts",
     "./src/actions/filter-actions.ts",
-    "./src/actions/filter-actions.test.ts",
     "./src/actions/recipe-actions.ts",
-    "./src/actions/recipe-actions.test.ts",
 
     "./src/components/footer.tsx",
     "./src/components/header.tsx",
@@ -33,20 +31,26 @@
     "./src/components/recipes/RecipesContainer.tsx",
 
     "./src/modules/http.ts",
-    "./src/modules/http.test.ts",
     "./src/modules/recipe.ts",
-    "./src/modules/recipe.test.ts",
     "./src/modules/route.ts",
-    "./src/modules/route.test.ts",
     "./src/modules/text.ts",
-    "./src/modules/text.test.ts",
 
     "./src/reducers/index.ts",
     "./src/reducers/category-reducer.ts",
-    "./src/reducers/category-reducer.test.ts",
     "./src/reducers/filter-reducer.ts",
-    "./src/reducers/filter-reducer.test.ts",
     "./src/reducers/recipe-reducer.ts",
-    "./src/reducers/recipe-reducer.test.ts"
+
+    "./tests/actions/category-actions.test.ts",
+    "./tests/actions/filter-actions.test.ts",
+    "./tests/actions/recipe-actions.test.ts",
+
+    "./tests/modules/http.test.ts",
+    "./tests/modules/recipe.test.ts",
+    "./tests/modules/route.test.ts",
+    "./tests/modules/text.test.ts",
+
+    "./tests/reducers/category-reducer.test.ts",
+    "./tests/reducers/filter-reducer.test.ts",
+    "./tests/reducers/recipe-reducer.test.ts"
   ]
 }

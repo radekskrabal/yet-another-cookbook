@@ -1,5 +1,5 @@
-import * as actions from '../actions/action-types';
-import filterReducer from './filter-reducer';
+import * as actions from '../../src/actions/action-types';
+import filterReducer from '../../src/reducers/filter-reducer';
 
 describe('filter reducer', () => {
     it('should handle initial state', () => {

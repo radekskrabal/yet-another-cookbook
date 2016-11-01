@@ -14,12 +14,12 @@
   },
   "devDependencies": {
     "babel-core": "6.18.0",
+    "babel-jest": "16.0.0",
     "babel-loader": "6.2.7",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.16.0",
     "babel-preset-stage-0": "6.16.0",
-    "react-addons-test-utils": "15.3.2",
-    "react-scripts": "0.7.0",
+    "jest": "16.0.2",
     "rimraf": "2.5.4",
     "source-map-loader": "0.1.5",
     "ts-loader": "0.9.5",
@@ -35,7 +35,7 @@
     "build:debug": "npm run webpack -- --color true --debug --output-pathinfo --devtool inline-source-map",
     "build:debug:watch": "npm run webpack -- --color true --debug --output-pathinfo --devtool inline-source-map --watch",
     "build:release": "npm run webpack -- --optimize-minimize --devtool source-map",
-    "test": "tsc && react-scripts test",
+    "test": "rimraf build && tsc --outDir build && jest",
     "validate": "tslint -c .\\tslint.json .\\src\\**\\*.ts .\\src\\**\\*.tsx",
     "webpack": "webpack",
     "prewebpack": "rimraf .\\dist"

@@ -1,4 +1,4 @@
-import { parseNumberParam } from './route';
+import { parseNumberParam } from '../../src/modules/route';
 
 describe('route module', () => {
     describe('parseNumberParam', () => {

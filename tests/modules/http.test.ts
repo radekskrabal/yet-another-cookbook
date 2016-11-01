@@ -1,4 +1,10 @@
-import { baseUrl, buildUrl, isSuccess, parseJson } from './http';
+import {
+    baseUrl,
+    buildUrl,
+    isLocalhost,
+    isSuccess,
+    parseJson
+} from '../../src/modules/http';
 
 describe('http module', () => {
     describe('buildUrl(path?: string, baseUrl = baseUrl): string', () => {
@@ -32,6 +38,20 @@ describe('http module', () => {
             ).toEqual(
                 baseUrl
             );
+        });
+    });
+
+    describe('isLocalhost', () => {
+        it('should return true', () => {
+            expect(
+                isLocalhost(<Location><any>{ hostname: 'localhost' })
+            ).toBeTruthy();
+        });
+
+        it('should return false', () => {
+            expect(
+                isLocalhost(<Location><any>{ hostname: 'www.skrabal.me' })
+            ).toBeFalsy();
         });
     });
 

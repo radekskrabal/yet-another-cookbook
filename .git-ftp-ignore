@@ -4,6 +4,7 @@ img/recipes/full/*
 node_modules/*
 src/*
 typings/*
+tests/*
 
 .babelrc
 .editorconfig

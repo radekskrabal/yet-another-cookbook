@@ -1,5 +1,5 @@
-import * as actions from './action-types';
-import { getCategoriesSuccess } from './category-actions';
+import * as actions from '../../src/actions/action-types';
+import { getCategoriesSuccess } from '../../src/actions/category-actions';
 
 describe('category actions', () => {
     it('getCategoriesSuccess should create GET_CATEGORIES_SUCCESS action', () => {

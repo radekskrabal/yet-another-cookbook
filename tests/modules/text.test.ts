@@ -1,4 +1,4 @@
-import { decorate } from './text';
+import { decorate } from '../../src/modules/text';
 
 describe('text module', () => {
     it('should handle empty text and empty query', () => {

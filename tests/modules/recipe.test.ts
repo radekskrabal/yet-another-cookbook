@@ -1,4 +1,4 @@
-import {findRecipeById, recipeSorter, findRecipes} from './recipe';
+import {findRecipeById, recipeSorter, findRecipes} from '../../src/modules/recipe';
 
 describe('recipe module', () => {
     const recipe = { id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara', servings: 2, time: 30, ingredients: <IDoableItem[]>[], method: <IDoableItem[]>[], finish: <IDoableItem[]>[] };

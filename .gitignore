@@ -1,7 +1,9 @@
 .idea
+/build/
+/dist/
+/node_modules/
+/typings/globals/
 
 /npm-debug.log
-/node_modules/
-/dist/
 /typings/index.d.ts
-/typings/globals/
+

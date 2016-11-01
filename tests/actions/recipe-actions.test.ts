@@ -1,5 +1,5 @@
-import * as actions from './action-types';
-import { createGetRecipesSuccessAction, createToggleFinishAction, createToggleIngredientAction, createToggleMethodAction } from './recipe-actions';
+import * as actions from '../../src/actions/action-types';
+import { createGetRecipesSuccessAction, createToggleFinishAction, createToggleIngredientAction, createToggleMethodAction } from '../../src/actions/recipe-actions';
 
 describe('recipe actions', () => {
     it('getRecipesSuccess should create GET_RECIPES_SUCCESS action', () => {
