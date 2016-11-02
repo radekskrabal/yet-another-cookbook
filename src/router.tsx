@@ -4,7 +4,7 @@ import { createHistory } from 'history';
 
 import { buildUrl } from './modules/http';
 import MainLayout from './components/main-layout';
-import RecipeContainer from './components/recipe/RecipeContainer';
+import RecipeContainer from './components/recipe/recipe-container';
 import RecipesContainer from './components/recipes/RecipesContainer';
 
 const browserHistory = useRouterHistory(createHistory)({

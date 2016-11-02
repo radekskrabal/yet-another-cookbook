@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import * as Http from '../modules/http';
 
-const title = 'Yet Another Infor Grid';
-const slogan = 'Home recipes made easy';
+export const title = 'Yet Another Infor Grid';
+export const slogan = 'Home recipes made easy';
 
 export default function(props: {}): JSX.Element {
     return (

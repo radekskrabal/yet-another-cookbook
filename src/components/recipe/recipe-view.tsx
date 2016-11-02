@@ -5,7 +5,7 @@ import * as Http from "../../modules/http";
 const generateIngredients = (ingredients: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
     const items = ingredients.map((m, i) => <li className={m.done ? 'done' : ''} key={i} onClick={() => toggle(i) }>{m.text}</li>);
     return (
-        <section>
+        <section className="ingredients">
             <h3>Ingredience</h3>
             <ul>
                 {items}
@@ -17,7 +17,7 @@ const generateIngredients = (ingredients: IDoableItem[], toggle: (position: numb
 const generateMethod = (method: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
     const steps = method.map((m, i) => <li className={m.done ? 'done' : ''} key={i} onClick={() => toggle(i) }>{m.text}</li>);
     return (
-        <section>
+        <section className="method">
             <h3>Postup</h3>
             <ol>
                 {steps}
@@ -29,7 +29,7 @@ const generateMethod = (method: IDoableItem[], toggle: (position: number) => voi
 const generateFinish = (finish: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
     const steps = finish.map((f, i) => <li className={f.done ? 'done' : ''} key={i} onClick={() => toggle(i)}>{f.text}</li>);
     return (
-        <section>
+        <section className="finish">
             <h3>Servírování</h3>
             <ul>
                 {steps}

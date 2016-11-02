@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import RecipeView from './RecipeView';
+import RecipeView from './recipe-view';
 import { createSetFilterAction } from '../../actions/filter-actions';
 import { createToggleFinishAction, createToggleIngredientAction, createToggleMethodAction } from '../../actions/recipe-actions';
 import { findRecipeById } from '../../modules/recipe';

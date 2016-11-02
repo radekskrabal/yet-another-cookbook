@@ -21,7 +21,7 @@ export function makeDoable(text: string): IDoableItem { // TODO: Test
 
 export function sortRecipes(recipes: IRecipe[]): IRecipe[] { // TODO: Test
     return recipes.sort(recipeSorter);
-}
+};
 
 export function recipeSorter(a: IRecipe, b: IRecipe): number {
     if (a.category !== b.category) {
@@ -29,7 +29,7 @@ export function recipeSorter(a: IRecipe, b: IRecipe): number {
     }
 
     return a.name > b.name ? 1 : -1;
-}
+};
 
 export function findRecipes(recipes: IRecipe[], filter: IFilterState): IRecipe[] {
     return recipes.filter(r => matchRecipe(r, filter.category_id, filter.query));
@@ -50,7 +50,7 @@ export function matchRecipe(recipe: IRecipe, category_id: number, query: string)
 
 export function toggleFinish(recipe: IRecipe, index: number): IRecipe {
     let toggled = Object.assign({}, recipe);
-    toggled.finish[index]['done'] = !toggled.finish[index]['done'];
+    toggled.finish[index].done = !toggled.finish[index].done;
 
     return toggled;
 }
