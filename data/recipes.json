@@ -336,5 +336,28 @@
     "finish": [
       "Servírujeme s polentou a grilovanou zeleninou."
     ]
+  },
+  {
+    "id": 14,
+    "category_id": 6,
+    "category": "Příloha",
+    "name": "Polenta",
+    "time": 15,
+    "servings": 2,
+    "ingredients": [
+      "100g instantní kukuřičné polenty",
+      "300g - 400g zeleninového či kuřecího vývaru",
+      "máslo",
+      "sůl",
+      "pepř"
+    ],
+    "method": [
+      "Troubu předehřejeme na 200 stupňů.",
+      "Vývar finálně dochutíme, později už je pozdě.",
+      "Polentu vsypeme do vývaru, která ho za stálého míchání za 1-3 minuty celý nasaje.",
+      "Mezitím vymažeme pečící formu na muffin máslem.",
+      "Jakmile se polenta začne odlepovat od stěn, přeneseme jí do zapékací misky a dáme 5-10 minut zapéct."
+    ],
+    "finish": []
   }
 ]
