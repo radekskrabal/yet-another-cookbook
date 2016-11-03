@@ -101,9 +101,7 @@ describe('http module', () => {
         it('should throw for 1xx informational status code', () => {
             expect(
                 () => parseJson(<Response>{ status: 100, statusText: 'Status Error' })
-            ).toThrow(
-                'Status Error'
-            );
+            ).toThrowError('Status Error');
         });
 
         // TODO: Use mocks for this test
@@ -116,25 +114,19 @@ describe('http module', () => {
         it('should throw for 3xx redirection status code', () => {
             expect(
                 () => parseJson(<Response>{ status: 300, statusText: 'Status Error' })
-            ).toThrow(
-                'Status Error'
-            );
+            ).toThrowError('Status Error');
         });
 
         it('should throw for 4xx client error status code', () => {
             expect(
                 () => parseJson(<Response>{ status: 400, statusText: 'Status Error' })
-            ).toThrow(
-                'Status Error'
-            );
+            ).toThrowError('Status Error');
         });
 
         it('should throw for 5xx server error status code', () => {
             expect(
                 () => parseJson(<Response>{ status: 500, statusText: 'Status Error' })
-            ).toThrow(
-                'Status Error'
-            );
+            ).toThrowError('Status Error');
         });
 
         // TODO: Write tests to parse JSON
