@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "es6", // module handling is handled by WebPack
-    "jsx": "react", // could be handled by Babel, but preserve throws an error
+    "module": "es6",
+    "jsx": "react",
     "baseUrl": "./src",
-    "outDir": "./dist",
+    "outDir": "./build",
     "sourceMap": true,
     "removeComments": false,
     "noImplicitAny": true,

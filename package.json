@@ -41,5 +41,21 @@
     "validate": "tslint -c .\\tslint.json .\\src\\**\\*.ts .\\src\\**\\*.tsx",
     "webpack": "webpack",
     "prewebpack": "rimraf .\\dist"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>\\node_modules\\ts-jest\\preprocessor.js",
+    "testRegex": "(/tests/.*|\\.test)\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "globals": {
+      "__TS_CONFIG__": {
+        "target": "es5",
+        "module": "commonjs",
+        "jsx": "react"
+      }
+    }
   }
 }
