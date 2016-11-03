@@ -308,5 +308,33 @@
       "Omáčku stáhneme z plamene a přidáme hořčici, citronovou šťávu, zakysanou smetanu. Rozmixujeme a můžeme servírovat."
     ],
     "finish": []
+  },
+  {
+    "id": 13,
+    "category_id": 4,
+    "category": "Hlavní chod",
+    "name": "Kuřecí supreme",
+    "time": 30,
+    "servings": 2,
+    "ingredients": [
+      "2ks kukuřičného kuřecího prso Supreme (450g)",
+      "1 cibule na půlměsíčky",
+      "1/2 lžičky tymiánu",
+      "2dl bílého vína",
+      "10g másla",
+      "2 kostky mraženého vývaru",
+      "sůl",
+      "pepř"
+    ],
+    "method": [
+      "Troubu předehřejeme na gril na 250 stupňů",
+      "Kuřecí prsa potřeme olejem a z obou stran pečeme na rozpálené pánvi. V průběhu přidáme sůl, pepř, tymián a ke konci i cibulku.",
+      "Vlijeme víno, přidáme vývar a necháme chvíli dusit.",
+      "Maso přemístíme do pečící nádoby a pečeme v troubě dojít do 75 stupňů.",
+      "V pánvi mezitím na mírném plamenu redukujeme šťávu, na konci přidáme i trošku másla."
+    ],
+    "finish": [
+      "Servírujeme s polentou a grilovanou zeleninou."
+    ]
   }
 ]
