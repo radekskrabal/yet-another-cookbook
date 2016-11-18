@@ -359,5 +359,46 @@
       "Jakmile se polenta začne odlepovat od stěn, přeneseme jí do zapékací misky a dáme 5-10 minut zapéct."
     ],
     "finish": []
+  },
+  {
+    "id": 15,
+    "category_id": 4,
+    "category": "Hlavní chod",
+    "name": "Hovězí líčka na červeném víně",
+    "time": 180,
+    "servings": 4,
+    "ingredients": [
+      "750g hovězích líček (2 kusy)",
+      "500ml červeného vína",
+      "350ml hovězího vývaru",
+      "2 mrkve",
+      "1 petržel",
+      "1/2 menšího celeru",
+      "2 lžíce másla",
+      "1 větší cible najemno",
+      "1 snítka rozmarýnu",
+      "1 snítka tymiánu",
+      "1 stroužek česneku",
+      "1 bobkový list",
+      "6 kuliček nového koření",
+      "5 kuliček černého pepře",
+      "1 lžíce rajského protlaku (volitelně)",
+      "hrst rukoly",
+      "sůl",
+      "čerstvě mletý černý pepř"
+    ],
+    "method": [
+      "Hovězí líčka osolíme, opepříme a v hrnci zatáhneme a dáme stranou do tepla.",
+      "Mrkev, celer a petžel pokrájíme na menší kusy. V hrnci osmahneme dozlatova.",
+      "Přidáme cibuli, česnek a opečeme dočervena.",
+      "Přidáme rozmarýn, tymián, rajský protlak a opečeme ještě minutu.",
+      "Zalejeme vínem, přivedeme k varu a necháme svařit na třetinu (asi 15 minut).",
+      "Do hrnce vrátíme líčka, zalijeme vývarem a dáme dusit do trouby na 140 stupňů na cca. 2-3 hodiny.",
+      "Maso vyndáme a necháme v teple. Omáčku přecedíme přes síto, pro zahuštění do ní rozmixujeme menší část zeleniny.",
+    ],
+    "finish": [
+      "Servírujeme s bramborovým či celerovým pyré.",
+      "Ozdobíme několika snítky rukoly."
+    ]
   }
 ]
