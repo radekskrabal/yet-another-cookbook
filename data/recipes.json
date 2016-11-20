@@ -400,5 +400,103 @@
       "Servírujeme s bramborovým či celerovým pyré.",
       "Ozdobíme několika snítky rukoly."
     ]
+  },
+  {
+    "id": 16,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Linecké cukroví",
+    "time": 90,
+    "servings": 4,
+    "ingredients": [
+      "420g hladké mouky",
+      "140g moučkového cukru",
+      "280g másla",
+      "4 žloutky",
+      "citronová kůra z 1/2 citronu",
+      "rybízová marmeláda"
+    ],
+    "method": [
+      "Mouku s cukrem prosijeme. Přidáme ostatní suroviny a zapracujeme na těsto.",
+      "Zabalíme do potravinářské fólie a necháme hodinu odpočinout v ledničce.",
+      "Těsto vyválíme na 2mm silný plát, ze kterého vykrájíme vzory (polovina se srdíčkem uprostřed).",
+      "Vykrájené vzory naklademe na máslem vymazaný plech.",
+      "Pečeme 5 minut na 180 stupňů dorůžova.",
+      "Vychladlé cukroví slepíme marmeládou."
+    ],
+    "finish": [
+      "Poprášíme moučkovým cukrem."
+    ]
+  },
+  {
+    "id": 17,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Vanilkové rohlíčky",
+    "time": 90,
+    "servings": 2,
+    "ingredients": [
+      "300g hladké mouky",
+      "50g moučkového cukru",
+      "200g másla",
+      "2 žloutky",
+      "200g moučkového cukru smíchaného s vanilkovým cukrem na obalování"
+    ],
+    "method": [
+      "Mouku s cukrem prosijeme. Přidáme ostatní suroviny a zapracujeme na těsto.",
+      "Zabalíme do potravinářské fólie a necháme hodinu odpočinout v ledničce.",
+      "Z těsta postupně odebírámé menší koušky a tvarujeme na rohlíčky.",
+      "Rohlíčky naklademe na máslem vymazaný plech.",
+      "Pečeme 7 minut na 180 stupňů dorůžova.",
+      "Teplé rohlíčky hned obalíme ve směsi moučkového cukru."
+    ],
+    "finish": []
+  },
+  {
+    "id": 18,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Linecké těsto",
+    "time": 15,
+    "servings": 1,
+    "ingredients": [
+      "200g hladké mouky",
+      "125g másla",
+      "1 žloutek",
+      "3 - 3.5 lžíce horké vody",
+      "1 lížce octa"
+    ],
+    "method": [
+      "Mouku prosijeme. Přidáme ostatní suroviny a zapracujeme na těsto.",
+      "Zabalíme do potravinářské fólie a necháme hodinu odpočinout v ledničce."
+    ],
+    "finish": []
+  },
+  {
+    "id": 19,
+    "category_id": 2,
+    "category": "Dezert",
+    "name": "Tvarohový závin",
+    "time": 30,
+    "servings": 1,
+    "ingredients": [
+      "1 linecké těsto",
+      "500g tvarohu",
+      "3 vejce",
+      "1/2 vanilkového pudinku",
+      "1 vanilkový cukr",
+      "rozinky",
+      "2 lžíce cukru moučky"
+    ],
+    "method": [
+      "V míse nejprve rozšleháme vejce s vanilkovým a moučkovým cukrem.",
+      "Pak zašleháne i vanilkový pudink a na závěr zapracujeme tvaroh. Přidáme i rozinky.",
+      "Z lineckého těsta si vyválíme obdélník. Naklademe směs tvarohu a zamotáme.",
+      "Před zamotáním závinu těsto potřeme mlékem.",
+      "Pečeme cca. 20 minut na 180 stupňů dorůžova."
+    ],
+    "finish": [
+      "Poprášíme moučkovým cukrem."
+    ]
   }
 ]
