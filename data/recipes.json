@@ -498,5 +498,35 @@
     "finish": [
       "Poprášíme moučkovým cukrem."
     ]
+  },
+  {
+    "id": 20,
+    "category_id": 4,
+    "category": "Hlavní chod",
+    "name": "Roštěná na červeném víne",
+    "time": 180,
+    "servings": 6,
+    "ingredients": [
+      "1kg hovězí zadní",
+      "500ml hovězí vývar",
+      "375ml červené víno",
+      "1 velká cibule",
+      "3 lžíce sádla",
+      "pepř",
+      "1 lžička soli"
+    ],
+    "method": [
+      "Maso pokrájíme na větší kostky. V rozpáleném hrnci na sádle postupně zatáhneme a vyndáme.",
+      "Na sádle poté necháme zesklovatět na jemno pokrájenou cibuli.",
+      "Přilejeme víno a necháme odpařit alkohol.",
+      "Do hrnce vrátíme zpět maso a zajijeme hovězím vývarem.",
+      "Dusíme 2-3 hodiny na mírném plameni pod pokličkou.",
+      "Maso vyndáme a omáčku rozmixujeme tyčovým mixérem.",
+      "Přidáme jíšku, vrátíme maso a necháme ještě provařit. Pozor, už se připaluje!",
+      "Dochutíme solí a čerstvě mletým pepřem."
+    ],
+    "finish": [
+      "Servírujeme s rýží natural či čerstvým pečivem"
+    ]
   }
 ]
