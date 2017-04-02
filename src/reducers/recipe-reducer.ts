@@ -1,5 +1,5 @@
 import * as actions from '../actions/action-types';
-import {findRecipeById, toggleFinish, toggleIngredient, toggleMethod} from "../modules/recipe";
+import {findRecipeById, toggleFinish, toggleIngredient, toggleMethod} from '../modules/recipe';
 
 const initialRecipesState: IRecipeState = {
     recipes: []

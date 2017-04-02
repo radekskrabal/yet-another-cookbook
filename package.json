@@ -25,6 +25,7 @@
     "rimraf": "2.5.4",
     "source-map-loader": "0.1.5",
     "ts-loader": "1.0.0",
+    "ts-jest": "19.0.6",
     "tslint": "3.15.1",
     "tslint-microsoft-contrib": "2.0.13",
     "typescript": "2.0.6",
@@ -33,17 +34,16 @@
   },
   "scripts": {
     "postinstall": "typings install",
-    "build": "npm run build:release",
-    "build:debug": "npm run webpack -- --color true --debug --output-pathinfo --devtool inline-source-map",
-    "build:debug:watch": "npm run webpack -- --color true --debug --output-pathinfo --devtool inline-source-map --watch",
-    "build:release": "npm run webpack -- --optimize-minimize --devtool source-map",
-    "test": "rimraf build && tsc --outDir build && jest",
-    "validate": "tslint -c .\\tslint.json .\\src\\**\\*.ts .\\src\\**\\*.tsx",
-    "webpack": "webpack",
-    "prewebpack": "rimraf .\\dist"
+    "build": "npm run webpack -- --optimize-minimize",
+    "develop": "npm run webpack -- --color true --debug --output-pathinfo --devtool inline-source-map --watch",
+    "pretest": "rimraf ./build ",
+    "test": "tsc --outDir ./build && jest",
+    "lint": "tslint -c ./tslint.json ./src/**/*.ts ./src/**/*.tsx",
+    "prewebpack": "rimraf ./dist",
+    "webpack": "webpack"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>\\node_modules\\ts-jest\\preprocessor.js",
+    "scriptPreprocessor": "<rootDir>/node_modules/ts-jest/preprocessor.js",
     "testRegex": "(/tests/.*|\\.test)\\.(ts|tsx)$",
     "moduleFileExtensions": [
       "ts",

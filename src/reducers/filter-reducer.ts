@@ -5,7 +5,7 @@ const filterReducer = (state: IFilterState = initialRecipesState, action: any = 
     switch (action.type) {
         case actions.SET_FILTER:
             const { category_id, query, recipe_id } = action;
-            return Object.assign({}, state, { category_id, query, recipe_id })
+            return Object.assign({}, state, { category_id, query, recipe_id });
     }
 
     return state;

@@ -528,5 +528,29 @@
     "finish": [
       "Servírujeme s rýží natural či čerstvým pečivem"
     ]
+  },
+  {
+    "id": 21,
+    "category_id": 1,
+    "category": "Pasta",
+    "name": "Smetanové gnocchi se šunkou a baby špěnátem",
+    "time": 15,
+    "servings": 2,
+    "ingredients": [
+      "350g bramborové gnocchi",
+      "150ml bílé víno",
+      "150ml zeleninový vývar",
+      "100ml smetana ke šlehání",
+      "25g kvalitní šunka (příp. prosciutto, pancetta)",
+      "1 hrst baby špenát (příp. polníček, rukola)"
+    ],
+    "method": [
+      "Na pánvi necháme vyvařit bílé víno.",
+      "Přilejeme vývar a necháme zredukovat asi na polovinu.",
+      "Mezitím dáme vařit gnocchi.",
+      "Na pánev vlijeme smetanu, přidáme i šunku na malé kousky a lžíci bramborového škrobu a necháme zredukovat na polovinu.",
+      "Na pánev přidáme uvařené gnochi, baby špenát a minutku prohřejeme."
+    ],
+    "finish": []
   }
 ]
