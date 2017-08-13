@@ -1,7 +1,13 @@
 import * as actions from '../actions/action-types';
 
-const initialRecipesState: IFilterState = { category_id: null, query: null, recipe_id: null };
-const filterReducer = (state: IFilterState = initialRecipesState, action: any = {}): IFilterState => {
+export interface IFilterState {
+    category_id: number;
+    query: string;
+    recipe_id: number;
+}
+
+const initialState: IFilterState = { category_id: null, query: null, recipe_id: null };
+const filterReducer = (state: IFilterState = initialState, action: any = {}): IFilterState => {
     switch (action.type) {
         case actions.SET_FILTER:
             const { category_id, query, recipe_id } = action;

@@ -1,145 +1,50 @@
 {
-  "rulesDirectory": "node_modules/tslint-microsoft-contrib",
+  "defaultSeverity": "warning",
   "rules": {
-    "chai-vague-errors": true,
-    "export-name": false,
-    "use-isnan": true,
-    "jquery-deferred-must-complete": true,
-    "missing-jsdoc": false,
-    "missing-optional-annotation": true,
-    "mocha-avoid-only": true,
-    "no-backbone-get-set-outside-model": false,
-    "no-banned-terms": true,
-    "no-constant-condition": true,
-    "no-control-regex": true,
-    "no-cookies": true,
-    "no-delete-expression": true,
-    "no-document-write": true,
-    "no-disable-auto-sanitization": true,
-    "no-duplicate-case": true,
-    "no-duplicate-parameter-names": true,
-    "no-empty-interfaces": true,
-    "no-exec-script": true,
-    "no-function-constructor-with-string-args": true,
-    "no-function-expression": false,
-    "no-http-string": [
-      false
-    ],
-    "no-increment-decrement": false,
-    "no-invalid-regexp": true,
-    "no-for-in": false,
-    "no-missing-visibility-modifiers": false,
-    "no-multiline-string": false,
-    "no-multiple-var-decl": false,
-    "no-unnecessary-bind": true,
-    "no-unnecessary-semicolons": true,
-    "no-octal-literal": true,
-    "no-regex-spaces": true,
-    "no-reserved-keywords": false,
-    "no-sparse-arrays": true,
-    "no-string-based-set-immediate": true,
-    "no-string-based-set-interval": true,
-    "no-string-based-set-timeout": true,
-    "no-unused-imports": true,
-    "no-with-statement": true,
-    "prefer-array-literal": false,
-    "promise-must-complete": true,
-    "react-no-dangerous-html": [
-      true, [
-        {
-          "file": "Footer.tsx",
-          "method": "render",
-          "comment": "Usage has been approved"
-        }
-      ]
-    ],
-    "use-named-parameter": true,
-    "valid-typeof": true,
-
-    "align": [
-      "arguments",
-      "parameters",
-      "statements"
-    ],
     "class-name": true,
     "comment-format": [
       true,
       "check-space"
     ],
-    "curly": true,
-    "eofline": false,
-    "forin": false,
     "indent": [
       true,
       "spaces"
     ],
-    "interface-name": true,
-    "jsdoc-format": true,
-    "label-position": true,
-    "label-undefined": true,
-    "member-ordering": [
-      "public-before-private",
-      "static-before-instance",
-      "variables-before-functions"
-    ],
-    "no-arg": true,
-    "no-bitwise": true,
-    "no-consecutive-blank-lines": true,
-    "no-console": [
+    "curly": true,
+    "eofline": true,
+    "no-consecutive-blank-lines": [
       true,
-      "debug",
-      "info",
-      "log",
-      "time",
-      "timeEnd",
-      "trace"
+      1
     ],
-    "no-construct": true,
-    "no-constructor-vars": false,
-    "no-debugger": true,
-    "no-duplicate-key": true,
     "no-duplicate-variable": true,
     "no-eval": true,
-    "no-require-imports": true,
-    "no-string-literal": false,
-    "no-switch-case-fall-through": true,
+    "no-internal-module": true,
+    "no-invalid-this": true,
     "no-trailing-whitespace": true,
-    "no-unreachable": true,
-    "no-unused-expression": true,
-    "no-unused-variable": [
-      true,
-      {
-        "ignore-pattern": "__extends"
-      }
-    ],
-    "no-use-before-declare": true,
+    "no-unsafe-finally": true,
+    // "no-default-export": false, // enable in future
     "no-var-keyword": true,
-    "no-var-requires": true,
+    "no-angle-bracket-type-assertion": true,
     "one-line": [
       true,
-      "check-catch",
-      "check-else",
-      "check-finally",
       "check-open-brace",
       "check-whitespace"
     ],
+    "prefer-const": true,
     "quotemark": [
       true,
       "single",
+      "avoid-escape",
       "jsx-double"
     ],
+    "radix": true,
     "semicolon": [
       true,
       "always"
     ],
-    "trailing-comma": true,
     "triple-equals": [
       true,
       "allow-null-check"
-    ],
-    "typedef": [
-      true,
-      "property-declaration"
     ],
     "typedef-whitespace": [
       true,
@@ -147,26 +52,19 @@
         "call-signature": "nospace",
         "index-signature": "nospace",
         "parameter": "nospace",
-        "arrow-parameter": "nospace",
         "property-declaration": "nospace",
-        "variable-declaration": "nospace",
-        "member-variable-declaration": "nospace"
+        "variable-declaration": "nospace"
       }
     ],
-    "use-strict": [
-      false
-    ],
     "variable-name": [
-      false,
-      "ban-keywords",
-      "check-format"
+      true,
+      "ban-keywords"
     ],
     "whitespace": [
       true,
       "check-branch",
       "check-decl",
       "check-operator",
-      "check-module",
       "check-separator",
       "check-type"
     ]

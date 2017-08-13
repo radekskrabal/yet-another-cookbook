@@ -1,7 +1,9 @@
 import * as React from 'react';
+
+import AppLink from '../app-link';
+import { IRecipe } from '../../api/models/recipe';
 import * as Http from '../../modules/http';
 import * as Text from '../../modules/text';
-import AppLink from '../app-link';
 
 interface IDisplayTableProps {
     recipes: IRecipe[];
@@ -9,8 +11,8 @@ interface IDisplayTableProps {
 }
 
 export default function (props: IDisplayTableProps): JSX.Element {
-    let recipes = props.recipes.map(recipe => {
-        let { id, category, name } = recipe;
+    const recipes = props.recipes.map(recipe => {
+        const { id, category, name } = recipe;
 
         // TODO: Refactor into row component
         return (
@@ -23,6 +25,7 @@ export default function (props: IDisplayTableProps): JSX.Element {
             </article>
         );
     });
+
     return (
         <section>
             {recipes}

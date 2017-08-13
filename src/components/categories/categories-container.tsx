@@ -1,15 +1,17 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch, MapDispatchToPropsObject } from 'react-redux';
 
 import CategoriesView from './categories-view';
 import * as categoryApi from '../../api/category-api';
+import { ICategory } from '../../api/models/category';
+import { IState } from '../../store';
 
 export interface ICategoriesContainerProps {
     categories: ICategory[];
 }
 
-interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
-    dispatch: Redux.Dispatch<void>; // mapDispatchToProps is called internally
+interface IDispatchProps extends MapDispatchToPropsObject {
+    dispatch: Dispatch<void>; // mapDispatchToProps is called internally
 }
 
 class CategoriesContainer extends React.Component<ICategoriesContainerProps & IDispatchProps, {}> {
@@ -24,7 +26,7 @@ class CategoriesContainer extends React.Component<ICategoriesContainerProps & ID
     }
 }
 
-const mapStateToProps = (store: IStoreState): ICategoriesContainerProps => {
+const mapStateToProps = (store: IState): ICategoriesContainerProps => {
     return {
         categories: store.categoryState.categories
     };

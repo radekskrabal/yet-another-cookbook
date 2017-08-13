@@ -1,6 +1,12 @@
 import { createStore } from 'redux';
-import reducers from './reducers/index';
+import reducers, { ICategoryState, IFilterState, IRecipeState } from './reducers/index';
+
+export interface IState {
+    categoryState: ICategoryState;
+    recipeState: IRecipeState;
+    filterState: IFilterState;
+}
 
 export default () => {
     return createStore(reducers);
-}
+};

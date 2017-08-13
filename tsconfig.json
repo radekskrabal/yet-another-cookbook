@@ -2,60 +2,21 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es6",
-    "jsx": "react",
+    "jsx": "preserve",
     "baseUrl": "./src",
     "outDir": "./build",
     "sourceMap": true,
-    "removeComments": false,
     "noImplicitAny": true,
-    "preserveConstEnums": true
+    "noUnusedLocals": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node"
   },
-  "files": [
-    "./typings/index.d.ts",
-    "./typings/app.d.ts",
-
-    "./src/app.tsx",
-
-    "./src/actions/action-types.ts",
-    "./src/actions/category-actions.ts",
-    "./src/actions/filter-actions.ts",
-    "./src/actions/recipe-actions.ts",
-
-    "./src/components/footer.tsx",
-    "./src/components/header.tsx",
-    "./src/components/main-layout.tsx",
-    "./src/components/recipe/recipe-container.tsx",
-    "./src/components/recipe/recipe-view.tsx",
-    "./src/components/recipes/DisplayTable.tsx",
-    "./src/components/recipes/SearchBox.tsx",
-    "./src/components/recipes/RecipesContainer.tsx",
-
-    "./src/modules/http.ts",
-    "./src/modules/recipe.ts",
-    "./src/modules/route.ts",
-    "./src/modules/text.ts",
-
-    "./src/reducers/index.ts",
-    "./src/reducers/category-reducer.ts",
-    "./src/reducers/filter-reducer.ts",
-    "./src/reducers/recipe-reducer.ts",
-
-    "./tests/actions/category-actions.test.ts",
-    "./tests/actions/filter-actions.test.ts",
-    "./tests/actions/recipe-actions.test.ts",
-
-    "./tests/components/app-link.test.tsx",
-    "./tests/components/header.test.tsx",
-    "./tests/components/footer.test.tsx",
-    "./tests/components/recipe/recipe-view.test.tsx",
-
-    "./tests/modules/http.test.ts",
-    "./tests/modules/recipe.test.ts",
-    "./tests/modules/route.test.ts",
-    "./tests/modules/text.test.ts",
-
-    "./tests/reducers/category-reducer.test.ts",
-    "./tests/reducers/filter-reducer.test.ts",
-    "./tests/reducers/recipe-reducer.test.ts"
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./tests/**/*.ts",
+    "./tests/**/*.tsx"
   ]
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const disclaimer = 'developed by Radek Skrabal, 2016';
+export const disclaimer = `developed by Radek Skrabal, ${new Date().getFullYear()}`;
 
 export default function(props: {}): JSX.Element {
     return (

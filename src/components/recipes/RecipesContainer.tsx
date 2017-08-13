@@ -1,14 +1,15 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch, MapDispatchToPropsObject } from 'react-redux';
 
 import DisplayTable from './DisplayTable';
 import SearchBox from './SearchBox';
 import AppLink from '../app-link';
 import * as recipeApi from '../../api/recipe-api';
+import { findRecipes, IRecipe } from '../../api/models/recipe';
 import { createSetFilterAction } from '../../actions/filter-actions';
 import * as route from '../../modules/route';
-import { findRecipes } from '../../modules/recipe';
-import {categoryParam} from '../../router';
+import { categoryParam } from '../../router';
+import { IState } from '../../store';
 
 interface IRecipesContainerProps {
     recipes: IRecipe[];
@@ -18,10 +19,14 @@ interface IRecipesContainerProps {
     routeParams?: { categoryId: string }; // passed automatically
 }
 
-interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
-    dispatch: Redux.Dispatch<void>;
+interface IDispatchProps extends MapDispatchToPropsObject {
+    dispatch: Dispatch<void>;
     setFilter: (action: any) => void;
 }
+
+const canToggleAllRecipes = (category_id: number, query: string): boolean => {
+    return category_id !== null && query !== null;
+};
 
 class RecipesContainer extends React.Component<IRecipesContainerProps & IDispatchProps, {}> {
     public render(): JSX.Element {
@@ -63,15 +68,13 @@ class RecipesContainer extends React.Component<IRecipesContainerProps & IDispatc
     }
 
     private setQuery(query: string = null): void {
-        this.props.setFilter(createSetFilterAction(this.props.category_id, query, null));
+        this.props.setFilter(
+            createSetFilterAction(this.props.category_id, query, null)
+        );
     }
 }
 
-const canToggleAllRecipes = (category_id: number, query: string): boolean => {
-    return category_id !== null && query !== null;
-};
-
-const mapStateToProps = (store: IStoreState): IRecipesContainerProps => {
+const mapStateToProps = (store: IState): IRecipesContainerProps => {
     return {
         recipes: findRecipes(
             store.recipeState.recipes,
@@ -82,7 +85,7 @@ const mapStateToProps = (store: IStoreState): IRecipesContainerProps => {
     };
 };
 
-const mapDispatchToProps = (dispatch: Redux.Dispatch<void>): IDispatchProps => {
+const mapDispatchToProps = (dispatch: Dispatch<void>): IDispatchProps => {
     return {
         dispatch,
         setFilter: (action: any): void => { dispatch(action); }

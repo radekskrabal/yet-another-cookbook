@@ -1,4 +1,5 @@
 import * as actions from '../actions/action-types';
+import { IRecipe } from '../api/models/recipe';
 
 export function createGetRecipesSuccessAction(recipes: IRecipe[]) {
     return {

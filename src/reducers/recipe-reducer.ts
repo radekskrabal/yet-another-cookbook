@@ -1,10 +1,14 @@
 import * as actions from '../actions/action-types';
-import {findRecipeById, toggleFinish, toggleIngredient, toggleMethod} from '../modules/recipe';
+import {findRecipeById, toggleFinish, toggleIngredient, toggleMethod, IRecipe } from '../api/models/recipe';
 
-const initialRecipesState: IRecipeState = {
+export interface IRecipeState {
+    recipes: IRecipe[];
+}
+
+const initialState: IRecipeState = {
     recipes: []
 };
-const recipeReducer = (state: IRecipeState = initialRecipesState, action: any = {}): IRecipeState => {
+const recipeReducer = (state: IRecipeState = initialState, action: any = {}): IRecipeState => {
     switch (action.type) {
         case actions.GET_RECIPES_SUCCESS:
             return Object.assign({}, state, { recipes: action.recipes });

@@ -1,5 +1,6 @@
 import * as actions from '../../src/actions/action-types';
 import { createGetRecipesSuccessAction, createToggleFinishAction, createToggleIngredientAction, createToggleMethodAction } from '../../src/actions/recipe-actions';
+import { IDoableItem } from '../../src/api/models/recipe';
 
 describe('recipe actions', () => {
     it('getRecipesSuccess should create GET_RECIPES_SUCCESS action', () => {

@@ -3,14 +3,14 @@ export function decorate(text: string, query: string, tagname = 'mark'): string 
         return text;
     }
 
-    let lcQuery = query.toLowerCase();
+    const lcQuery = query.toLowerCase();
     if (!text.toLowerCase().includes(lcQuery)) { // nothing to be decorated
         return text;
     }
 
     let decoratedText = '';
     while (text.toLowerCase().includes(lcQuery)) {
-        let i = text.toLowerCase().indexOf(lcQuery);
+        const i = text.toLowerCase().indexOf(lcQuery);
 
         if (i > 0) { // prepend text
             decoratedText += text.substring(0, i);

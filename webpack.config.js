@@ -11,24 +11,24 @@ const config = {
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", '.jsx'],
-        modulesDirectories: ['./src', './node_modules']
+        modules: [
+            path.join(__dirname, 'node_modules')
+        ]
     },
     module: {
         loaders: [
             {
                 test: /\.tsx?$/,
-                loaders: [ "babel", "ts-loader" ],
+                loaders: ["babel-loader", "ts-loader"],
                 exclude: /node_modules/
             }
-        ],
-        preLoaders: [
-            { test: /\.js$/, loader: "source-map-loader" }
         ]
     },
     externals: {
         "react": "React",
         "react-dom": "ReactDOM",
         "react-router": "ReactRouter",
+        "react-router-dom": "ReactRouterDOM",
         "history": "History",
         "redux": "Redux",
         "react-redux": "ReactRedux"

@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch, MapDispatchToPropsObject } from 'react-redux';
 
 import RecipeView from './recipe-view';
+import { IState } from '../../store';
 import { createSetFilterAction } from '../../actions/filter-actions';
 import { createToggleFinishAction, createToggleIngredientAction, createToggleMethodAction } from '../../actions/recipe-actions';
-import { findRecipeById } from '../../modules/recipe';
+import { findRecipeById, IRecipe } from '../../api/models/recipe';
 import * as route from '../../modules/route';
 import { recipeParam } from '../../router';
 
@@ -13,7 +14,7 @@ export interface IRecipeContainerProps {
     routeParams?: { recipeId: string }; // passed automatically
 }
 
-interface IDispatchProps extends ReactRedux.MapDispatchToPropsObject {
+interface IDispatchProps extends MapDispatchToPropsObject {
     setFilter: (action: any) => void;
     toggleFinish: (recipe_id: number, index: number) => void;
     toggleIngredient: (recipe_id: number, index: number) => void;
@@ -25,7 +26,7 @@ class RecipeContainer extends React.Component<IRecipeContainerProps & IDispatchP
         if (this.props.recipe === null) {
             return (
                 <article />
-            )
+            );
         }
 
         return (
@@ -54,13 +55,13 @@ class RecipeContainer extends React.Component<IRecipeContainerProps & IDispatchP
     }
 }
 
-const mapStateToProps = (store: IStoreState): IRecipeContainerProps => {
+const mapStateToProps = (store: IState): IRecipeContainerProps => {
     return {
         recipe: findRecipeById(store.filterState.recipe_id, store.recipeState.recipes)
     };
 };
 
-const mapDispatchToProps = (dispatch: Redux.Dispatch<void>) => {
+const mapDispatchToProps = (dispatch: Dispatch<void>) => {
     return {
         setFilter: (action: any): void => {
             dispatch(action);
@@ -74,7 +75,7 @@ const mapDispatchToProps = (dispatch: Redux.Dispatch<void>) => {
         toggleMethod: (recipe_id: number, index: number): void => {
             dispatch(createToggleMethodAction(recipe_id, index));
         }
-    }
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeContainer);

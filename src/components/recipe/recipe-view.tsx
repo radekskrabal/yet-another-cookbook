@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import * as Http from "../../modules/http";
+import { IDoableItem, IRecipe } from '../../api/models/recipe';
+import * as Http from '../../modules/http';
 
 const generateIngredients = (ingredients: IDoableItem[], toggle: (position: number) => void): JSX.Element => {
     const items = ingredients.map((m, i) => <li className={m.done ? 'done' : ''} key={i} onClick={() => toggle(i) }>{m.text}</li>);

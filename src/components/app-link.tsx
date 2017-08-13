@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Link } from 'react-router';
+import { NavLink, NavLinkProps } from 'react-router-dom';
 
-export default class AppLink extends React.Component<any /* TODO: Use ReactRouter.LinkProps */, {}> {
-    public constructor(props: ReactRouter.LinkProps) {
+export default class AppLink extends React.Component<NavLinkProps, {}> {
+    public constructor(props: NavLinkProps) {
         super(props);
     }
 
     render() {
         return (
-            <Link activeClassName="active-link" {...this.props} />
+            <NavLink activeClassName="active-link" {...this.props} />
         );
     }
 }

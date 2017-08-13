@@ -1,7 +1,8 @@
 import {
     findRecipeById, recipeSorter, findRecipes, toggleFinish, toggleIngredient,
     toggleMethod, matchRecipe
-} from '../../src/modules/recipe';
+} from '../../src/api/models/recipe';
+import { IDoableItem } from '../../src/api/models/recipe';
 
 describe('recipe module', () => {
     const recipe = { id: 1, category_id: 1, category: 'Pasta', name: 'Spaghetti Carbonara x', servings: 2, time: 30, ingredients: [ { text: '4 egg yolks', done: false } ], method: [ { text: 'Start boiling the water.', done: false } ], finish: [ { text: 'Eat it!', done: false } ] };
